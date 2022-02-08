@@ -1,0 +1,11 @@
+C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source code.csproj.AssemblyReference.cache
+C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source code.csproj.SuggestedBindingRedirects.cache
+C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source_code.Properties.Resources.resources
+C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source code.csproj.GenerateResource.cache
+C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source code.csproj.CoreCompileInputs.cache
+C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\bin\Debug\Source code.exe.config
+C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\bin\Debug\Source code.exe
+C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\bin\Debug\Source code.pdb
+C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source_code.Main_form.resources
+C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source code.exe
+C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source code.pdb
