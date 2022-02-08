@@ -17,12 +17,12 @@ namespace Source_code.Helpers
             return null;
         }
 
-        public static Image ByteToImage(byte[] Stream)
+        public static Image ByteToImage(byte[] stream)
         {
-            if (Stream != null)
+            if (stream != null)
             {
-                var stream=new MemoryStream(Stream);
-                return Image.FromStream(stream);
+                var newStream=new MemoryStream(stream);
+                return Image.FromStream(newStream);
             }
             return null;
         }
