@@ -33,7 +33,8 @@ namespace Source_code.Forms
         {
             try
             {
-                
+                dgvStudentsSubjects.DataSource=null;
+                dgvStudentsSubjects.DataSource = _db.StudentsPassedSubjects.ToList();
             }
             catch (Exception ex)
             {
@@ -41,7 +42,6 @@ namespace Source_code.Forms
                 //Show the inner ex only if it's not null;
             }
         }
-
         private void LoadAllStudents()
         {
             try
