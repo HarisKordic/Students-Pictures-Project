@@ -28,23 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.llblMail = new System.Windows.Forms.LinkLabel();
             this.llblGithub = new System.Windows.Forms.LinkLabel();
             this.btnStartProgram = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.pictureBox1.Image = global::Source_code.Properties.Resources.sp_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(65, 25);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(668, 231);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // llblMail
             // 
@@ -84,6 +73,7 @@
             this.btnStartProgram.FlatAppearance.BorderSize = 100;
             this.btnStartProgram.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnStartProgram.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnStartProgram.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnStartProgram.Location = new System.Drawing.Point(288, 408);
             this.btnStartProgram.Name = "btnStartProgram";
             this.btnStartProgram.Size = new System.Drawing.Size(203, 30);
@@ -91,6 +81,17 @@
             this.btnStartProgram.Text = "Start program";
             this.btnStartProgram.UseVisualStyleBackColor = false;
             this.btnStartProgram.Click += new System.EventHandler(this.btnStartProgram_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.pictureBox1.Image = global::Source_code.Properties.Resources.sp_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(65, 25);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(668, 231);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Main_form
             // 
@@ -102,6 +103,7 @@
             this.Controls.Add(this.llblMail);
             this.Controls.Add(this.pictureBox1);
             this.IsMdiContainer = true;
+            this.MaximizeBox = false;
             this.Name = "Main_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome";

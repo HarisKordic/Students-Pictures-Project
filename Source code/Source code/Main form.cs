@@ -33,9 +33,12 @@ namespace Source_code
         #endregion
 
         #region Open main program
+
         private void btnStartProgram_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            new Forms.frmMainView().ShowDialog();
+            this.Show();
         }
         #endregion
     }

@@ -71,6 +71,12 @@
     <Compile Include="Entitites\StudentPassedSubject.cs" />
     <Compile Include="Entitites\Student.cs" />
     <Compile Include="Entitites\Subject.cs" />
+    <Compile Include="Forms\frmMainView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMainView.Designer.cs">
+      <DependentUpon>frmMainView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\ImageConverter.cs" />
     <Compile Include="Main form.cs">
       <SubType>Form</SubType>
@@ -80,6 +86,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmMainView.resx">
+      <DependentUpon>frmMainView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main form.resx">
       <DependentUpon>Main form.cs</DependentUpon>
     </EmbeddedResource>
