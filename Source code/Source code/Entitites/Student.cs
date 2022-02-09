@@ -23,7 +23,7 @@ namespace Source_code.Entitites
         public string AcademicYear { get; set; }
         public string PhoneNumber { get; set; }
         public string Email => Name + "." + Surname + "@somedomain.com";
-
+        [NotMapped] public string DateToShow => BirthDay.ShowDate();//So we can get the date in the DGV in the correct format;
         #endregion
 
         public Student()
@@ -50,4 +50,14 @@ namespace Source_code.Entitites
         }
         #endregion
     }
+
+    #region Extension class
+    internal static class Extension
+    {
+        public static string ShowDate(this DateTime dateTime)
+        {
+            return dateTime.ToString("dd mm yyyy");
+        }
+    }
+    #endregion
 }

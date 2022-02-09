@@ -145,7 +145,7 @@
             // 
             // BirthDay
             // 
-            this.BirthDay.DataPropertyName = "BirthDay";
+            this.BirthDay.DataPropertyName = "DateToShow";
             this.BirthDay.HeaderText = "BirthDay";
             this.BirthDay.Name = "BirthDay";
             this.BirthDay.ReadOnly = true;
