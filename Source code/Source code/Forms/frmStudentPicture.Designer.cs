@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grpBoxAddNewPicture = new System.Windows.Forms.GroupBox();
             this.lblDescription = new System.Windows.Forms.Label();
             this.txtBoxDescription = new System.Windows.Forms.TextBox();
@@ -35,8 +36,10 @@
             this.lblAddPic = new System.Windows.Forms.Label();
             this.AddPicture = new System.Windows.Forms.PictureBox();
             this.opfFindPicture = new System.Windows.Forms.OpenFileDialog();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpBoxAddNewPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
             // grpBoxAddNewPicture
@@ -86,6 +89,7 @@
             this.btnSavePicture.TabIndex = 8;
             this.btnSavePicture.Text = "Add picture";
             this.btnSavePicture.UseVisualStyleBackColor = false;
+            this.btnSavePicture.Click += new System.EventHandler(this.btnSavePicture_Click);
             // 
             // lblAddPic
             // 
@@ -109,6 +113,10 @@
             // 
             this.opfFindPicture.FileName = "openFileDialog1";
             // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            // 
             // frmStudentPicture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,6 +130,7 @@
             this.grpBoxAddNewPicture.ResumeLayout(false);
             this.grpBoxAddNewPicture.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -135,5 +144,6 @@
         private System.Windows.Forms.Label lblAddPic;
         private System.Windows.Forms.Button btnSavePicture;
         private System.Windows.Forms.OpenFileDialog opfFindPicture;
+        private System.Windows.Forms.ErrorProvider error;
     }
 }
