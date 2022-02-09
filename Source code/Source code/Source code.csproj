@@ -85,6 +85,7 @@
       <DependentUpon>frmStudentPicture.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ImageConverter.cs" />
+    <Compile Include="Helpers\Validator.cs" />
     <Compile Include="Main form.cs">
       <SubType>Form</SubType>
     </Compile>
