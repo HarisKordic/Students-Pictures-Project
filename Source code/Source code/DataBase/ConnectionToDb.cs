@@ -9,9 +9,15 @@ namespace Source_code.DataBase
 {
     public  class ConnectionToDb:DbContext
     {
-        public ConnectionToDb():base("DataBasePath")
+        #region Connection to DB
+        public ConnectionToDb() : base("DataBasePath")
         {
-            
+
         }
+        #endregion
+
+        #region Tables
+
+        #endregion
     }
 }
