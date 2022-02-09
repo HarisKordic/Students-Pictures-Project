@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -78,6 +79,35 @@ namespace Source_code.Forms
             else
                 LoadStudentsSubjects(_db.StudentsPassedSubjects.Where(s =>
                     s.Subject.Name.ToLower().Contains(filter)).ToList());
+        }
+
+        #endregion
+
+        #region Saving to file
+        private void btnSaveStudentToFile_Click(object sender, EventArgs e)
+        {
+            using (var fs = new FileStream("Students.csv",FileMode.OpenOrCreate))
+            using(var  sw=new StreamWriter(fs))
+            {
+                for (int i = 0; i < _db.Students.ToList().Count; i++)
+                    sw.WriteLine(_db.Students.ToList()[i].StudentInfo);
+                MessageBox.Show("You successfully saved all of the students showed in the table!" +
+                                " You can find the file under the name: 'Students.csv'",
+                    "Successfull operation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnSaveStudentsSubjectsToFile_Click(object sender, EventArgs e)
+        {
+            using (var fs = new FileStream("StudentsPassedSubjects.csv", FileMode.OpenOrCreate))
+            using (var sw = new StreamWriter(fs))
+            {
+                for (int i = 0; i < _db.StudentsPassedSubjects.ToList().Count; i++)
+                    sw.WriteLine(_db.StudentsPassedSubjects.ToList()[i]);//ToString method of the given object is called;
+                MessageBox.Show("You successfully saved all of the students and their passed subjects showed in the table!" +
+                                " You can find the file under the name: 'StudentsPassedSubjects.csv'",
+                    "Successfull operation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
         #endregion
     }

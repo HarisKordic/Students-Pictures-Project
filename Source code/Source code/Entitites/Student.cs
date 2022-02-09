@@ -22,8 +22,14 @@ namespace Source_code.Entitites
         public int Semester { get; set; }
         public string AcademicYear { get; set; }
         public string PhoneNumber { get; set; }
-        public string Email => Name + "." + Surname + "@somedomain.com";
+        public string Email => Name + "." + Surname + "@domain.com";
         [NotMapped] public string DateToShow => BirthDay.ShowDate();//So we can get the date in the DGV in the correct format;
+
+        [NotMapped]
+        public string StudentInfo => Name + " " + Surname + " born: " + DateToShow +
+                                     " is currently in " + Semester + "  semester of the  academic " + AcademicYear +
+                                     " year." + " Email: " + Email + ", Phone number: " + PhoneNumber
+                                     + ", gender: " + Gender;//So we can have a string of information when we save a student to a file;
         #endregion
 
         public Student()
@@ -32,7 +38,6 @@ namespace Source_code.Entitites
             PhoneNumber=GeneratePhoneNumber();
         }
         public override string ToString() => Name + " " + Surname;
-
         #region Phone num generator
 
         private string GeneratePhoneNumber()
@@ -50,7 +55,6 @@ namespace Source_code.Entitites
         }
         #endregion
     }
-
     #region Extension class
     internal static class Extension
     {

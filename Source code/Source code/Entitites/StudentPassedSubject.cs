@@ -18,5 +18,9 @@ namespace Source_code.Entitites
         public int Grade { get; set; }
         public DateTime Date { get; set; }
         #endregion  
+        public override string ToString()
+        {
+            return $"Student: {Student} has passed the subject: {Subject} with {Grade}/10 grade!";
+        }
     }
 }

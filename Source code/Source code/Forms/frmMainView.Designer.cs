@@ -39,15 +39,6 @@
             this.txtBoxStudentSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
-            this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BirthDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Semester = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AcademicYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpBoxStudentsSubjects = new System.Windows.Forms.GroupBox();
             this.txtBoxSubjectSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
@@ -58,6 +49,17 @@
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteSubject = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ShowPictures = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BirthDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Semester = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AcademicYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveStudentToFile = new System.Windows.Forms.Button();
+            this.btnSaveStudentsSubjectsToFile = new System.Windows.Forms.Button();
             this.grpBoxStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.grpBoxStudentsSubjects.SuspendLayout();
@@ -67,6 +69,7 @@
             // grpBoxStudents
             // 
             this.grpBoxStudents.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.grpBoxStudents.Controls.Add(this.btnSaveStudentToFile);
             this.grpBoxStudents.Controls.Add(this.txtBoxStudentSearch);
             this.grpBoxStudents.Controls.Add(this.label1);
             this.grpBoxStudents.Controls.Add(this.dgvStudents);
@@ -150,76 +153,10 @@
             this.dgvStudents.Size = new System.Drawing.Size(1358, 266);
             this.dgvStudents.TabIndex = 0;
             // 
-            // Namee
-            // 
-            this.Namee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Namee.DataPropertyName = "Name";
-            this.Namee.HeaderText = "Name";
-            this.Namee.Name = "Namee";
-            this.Namee.ReadOnly = true;
-            // 
-            // Surname
-            // 
-            this.Surname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Surname.DataPropertyName = "Surname";
-            this.Surname.HeaderText = "Surname";
-            this.Surname.Name = "Surname";
-            this.Surname.ReadOnly = true;
-            // 
-            // Index
-            // 
-            this.Index.DataPropertyName = "Index";
-            this.Index.HeaderText = "Index";
-            this.Index.Name = "Index";
-            this.Index.ReadOnly = true;
-            // 
-            // BirthDay
-            // 
-            this.BirthDay.DataPropertyName = "DateToShow";
-            this.BirthDay.HeaderText = "BirthDay";
-            this.BirthDay.Name = "BirthDay";
-            this.BirthDay.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            this.Gender.DataPropertyName = "Gender";
-            this.Gender.HeaderText = "Gender";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // Semester
-            // 
-            this.Semester.DataPropertyName = "Semester";
-            this.Semester.HeaderText = "Semester";
-            this.Semester.Name = "Semester";
-            this.Semester.ReadOnly = true;
-            // 
-            // AcademicYear
-            // 
-            this.AcademicYear.DataPropertyName = "AcademicYear";
-            this.AcademicYear.HeaderText = "Academic year";
-            this.AcademicYear.Name = "AcademicYear";
-            this.AcademicYear.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // PhoneNumber
-            // 
-            this.PhoneNumber.DataPropertyName = "PhoneNumber";
-            this.PhoneNumber.HeaderText = "Phone number";
-            this.PhoneNumber.Name = "PhoneNumber";
-            this.PhoneNumber.ReadOnly = true;
-            this.PhoneNumber.Width = 204;
-            // 
             // grpBoxStudentsSubjects
             // 
             this.grpBoxStudentsSubjects.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.grpBoxStudentsSubjects.Controls.Add(this.btnSaveStudentsSubjectsToFile);
             this.grpBoxStudentsSubjects.Controls.Add(this.txtBoxSubjectSearch);
             this.grpBoxStudentsSubjects.Controls.Add(this.lblSearch);
             this.grpBoxStudentsSubjects.Controls.Add(this.dgvStudentsSubjects);
@@ -345,6 +282,103 @@
             this.ShowPictures.Text = "Show student\'s pictures";
             this.ShowPictures.UseColumnTextForButtonValue = true;
             // 
+            // Namee
+            // 
+            this.Namee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Namee.DataPropertyName = "Name";
+            this.Namee.HeaderText = "Name";
+            this.Namee.Name = "Namee";
+            this.Namee.ReadOnly = true;
+            // 
+            // Surname
+            // 
+            this.Surname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Surname.DataPropertyName = "Surname";
+            this.Surname.HeaderText = "Surname";
+            this.Surname.Name = "Surname";
+            this.Surname.ReadOnly = true;
+            // 
+            // Index
+            // 
+            this.Index.DataPropertyName = "Index";
+            this.Index.HeaderText = "Index";
+            this.Index.Name = "Index";
+            this.Index.ReadOnly = true;
+            // 
+            // BirthDay
+            // 
+            this.BirthDay.DataPropertyName = "DateToShow";
+            this.BirthDay.HeaderText = "BirthDay";
+            this.BirthDay.Name = "BirthDay";
+            this.BirthDay.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.HeaderText = "Gender";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // Semester
+            // 
+            this.Semester.DataPropertyName = "Semester";
+            this.Semester.HeaderText = "Semester";
+            this.Semester.Name = "Semester";
+            this.Semester.ReadOnly = true;
+            // 
+            // AcademicYear
+            // 
+            this.AcademicYear.DataPropertyName = "AcademicYear";
+            this.AcademicYear.HeaderText = "Academic year";
+            this.AcademicYear.Name = "AcademicYear";
+            this.AcademicYear.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // PhoneNumber
+            // 
+            this.PhoneNumber.DataPropertyName = "PhoneNumber";
+            this.PhoneNumber.HeaderText = "Phone number";
+            this.PhoneNumber.Name = "PhoneNumber";
+            this.PhoneNumber.ReadOnly = true;
+            this.PhoneNumber.Width = 110;
+            // 
+            // btnSaveStudentToFile
+            // 
+            this.btnSaveStudentToFile.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSaveStudentToFile.FlatAppearance.BorderSize = 100;
+            this.btnSaveStudentToFile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSaveStudentToFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnSaveStudentToFile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSaveStudentToFile.Location = new System.Drawing.Point(1271, 25);
+            this.btnSaveStudentToFile.Name = "btnSaveStudentToFile";
+            this.btnSaveStudentToFile.Size = new System.Drawing.Size(93, 30);
+            this.btnSaveStudentToFile.TabIndex = 7;
+            this.btnSaveStudentToFile.Text = "Save to file";
+            this.btnSaveStudentToFile.UseVisualStyleBackColor = false;
+            this.btnSaveStudentToFile.Click += new System.EventHandler(this.btnSaveStudentToFile_Click);
+            // 
+            // btnSaveStudentsSubjectsToFile
+            // 
+            this.btnSaveStudentsSubjectsToFile.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSaveStudentsSubjectsToFile.FlatAppearance.BorderSize = 100;
+            this.btnSaveStudentsSubjectsToFile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSaveStudentsSubjectsToFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnSaveStudentsSubjectsToFile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSaveStudentsSubjectsToFile.Location = new System.Drawing.Point(1271, 25);
+            this.btnSaveStudentsSubjectsToFile.Name = "btnSaveStudentsSubjectsToFile";
+            this.btnSaveStudentsSubjectsToFile.Size = new System.Drawing.Size(93, 30);
+            this.btnSaveStudentsSubjectsToFile.TabIndex = 8;
+            this.btnSaveStudentsSubjectsToFile.Text = "Save to file";
+            this.btnSaveStudentsSubjectsToFile.UseVisualStyleBackColor = false;
+            this.btnSaveStudentsSubjectsToFile.Click += new System.EventHandler(this.btnSaveStudentsSubjectsToFile_Click);
+            // 
             // frmMainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -380,6 +414,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewButtonColumn DeleteSubject;
         private System.Windows.Forms.DataGridViewButtonColumn ShowPictures;
+        private System.Windows.Forms.TextBox txtBoxStudentSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBoxSubjectSearch;
+        private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn Namee;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Index;
@@ -389,9 +427,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AcademicYear;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
-        private System.Windows.Forms.TextBox txtBoxStudentSearch;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtBoxSubjectSearch;
-        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.Button btnSaveStudentToFile;
+        private System.Windows.Forms.Button btnSaveStudentsSubjectsToFile;
     }
 }
