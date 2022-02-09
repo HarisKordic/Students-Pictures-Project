@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Source_code.DataBase;
+using Source_code.Entitites;
 
 namespace Source_code.Forms
 {
@@ -23,18 +24,18 @@ namespace Source_code.Forms
         }
         private void frmMainView_Load(object sender, EventArgs e)
         {
-            LoadAllStudents();
-            LoadStudentsSubjects();
+            LoadAllStudents(_db.Students.ToList());
+            LoadStudentsSubjects(_db.StudentsPassedSubjects.ToList());
         }
         #endregion
 
         #region Loading data from DB to dgv's
-        private void LoadStudentsSubjects()
+        private void LoadStudentsSubjects(List<StudentPassedSubject> list)
         {
             try
             {
                 dgvStudentsSubjects.DataSource=null;
-                dgvStudentsSubjects.DataSource = _db.StudentsPassedSubjects.ToList();
+                dgvStudentsSubjects.DataSource = list?? new List<StudentPassedSubject>();
             }
             catch (Exception ex)
             {
@@ -42,12 +43,12 @@ namespace Source_code.Forms
                 //Show the inner ex only if it's not null;
             }
         }
-        private void LoadAllStudents()
+        private void LoadAllStudents(List <Student> list)
         {
             try
             {
                 dgvStudents.DataSource=null;
-                dgvStudents.DataSource = _db.Students.ToList();//Convert to list and set as data source;
+                dgvStudents.DataSource = list ?? new List<Student>();
             }
             catch (Exception ex)
             {
@@ -57,5 +58,27 @@ namespace Source_code.Forms
         }
         #endregion
 
+        #region Search for subject  or student
+        private void txtBoxStudentSearch_TextChanged(object sender, EventArgs e)
+        {
+            var filter = txtBoxStudentSearch.Text.ToLower();
+            if (string.IsNullOrWhiteSpace(filter))
+                LoadAllStudents(_db.Students.ToList());
+            else
+                LoadAllStudents(_db.Students.Where(s =>
+                    s.Name.ToLower().Contains(filter) ||
+                    s.Surname.ToLower().Contains(filter)).ToList());
+        }
+
+        private void txtBoxSubjectSearch_TextChanged(object sender, EventArgs e)
+        {
+            var filter = txtBoxSubjectSearch.Text.ToLower();
+            if (string.IsNullOrWhiteSpace(filter))
+                LoadStudentsSubjects(_db.StudentsPassedSubjects.ToList());
+            else
+                LoadStudentsSubjects(_db.StudentsPassedSubjects.Where(s =>
+                    s.Subject.Name.ToLower().Contains(filter)).ToList());
+        }
+        #endregion
     }
 }
