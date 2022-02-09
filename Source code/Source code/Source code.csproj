@@ -70,6 +70,7 @@
     <Compile Include="Entitites\Gender.cs" />
     <Compile Include="Entitites\StudentPassedSubject.cs" />
     <Compile Include="Entitites\Student.cs" />
+    <Compile Include="Entitites\StudentPicture.cs" />
     <Compile Include="Entitites\Subject.cs" />
     <Compile Include="Forms\frmMainView.cs">
       <SubType>Form</SubType>

@@ -22,6 +22,7 @@ namespace Source_code.DataBase
         public  DbSet<Student> Students { get; set; }
         public  DbSet<Subject> Subjects { get; set; }
         public  DbSet<StudentPassedSubject> StudentsPassedSubjects { get; set; }
+        public DbSet<StudentPicture> StudentsPictures { get; set; }
         #endregion
     }
 }

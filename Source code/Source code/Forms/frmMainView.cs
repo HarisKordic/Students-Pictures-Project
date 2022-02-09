@@ -124,7 +124,7 @@ namespace Source_code.Forms
                     {
                         var studentSubject = dgv.Rows[e.RowIndex].DataBoundItem as StudentPassedSubject;
                         if (MessageBox.Show($"Are you sure you want to permanently delete {studentSubject.Subject}" +
-                                            $" from {studentSubject.Student} student?", "Warning you're " +
+                                            $"  subject from {studentSubject.Student} student?", "Warning you're " +
                                 "about to delete a record from the Data Base", MessageBoxButtons.YesNo,
                                 MessageBoxIcon.Warning) == DialogResult.Yes)
                         {
