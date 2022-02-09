@@ -142,7 +142,7 @@ namespace Source_code.Forms
                     {
                         LoadPicturesToStudents();
                         var studentSubject = dgv.Rows[e.RowIndex].DataBoundItem as StudentPassedSubject;
-                        new frmStudentPicture(studentSubject.Student).ShowDialog();
+                        new frmStudentPicture(studentSubject?.Student).ShowDialog();
                     }
                 }
             }
