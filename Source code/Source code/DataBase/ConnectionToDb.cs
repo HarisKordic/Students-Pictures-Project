@@ -20,6 +20,8 @@ namespace Source_code.DataBase
         #region Tables
         public DbSet<Gender> Genders { get; set; }
         public DbSet<Student> Students { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<StudentPassedSubject> StudentPassedSubjects { get; set; }
         #endregion
     }
 }

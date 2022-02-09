@@ -68,7 +68,9 @@
     <Compile Include="DataBase\ConnectionToDb.cs" />
     <Compile Include="DataBase\DB.cs" />
     <Compile Include="Entitites\Gender.cs" />
+    <Compile Include="Entitites\StudentPassedSubject.cs" />
     <Compile Include="Entitites\Student.cs" />
+    <Compile Include="Entitites\Subject.cs" />
     <Compile Include="Helpers\ImageConverter.cs" />
     <Compile Include="Main form.cs">
       <SubType>Form</SubType>
