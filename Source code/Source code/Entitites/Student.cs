@@ -30,12 +30,14 @@ namespace Source_code.Entitites
                                      " is currently in " + Semester + "  semester of the  academic " + AcademicYear +
                                      " year." + " Email: " + Email + ", Phone number: " + PhoneNumber
                                      + ", gender: " + Gender;//So we can have a string of information when we save a student to a file;
+        [NotMapped] public List<StudentPicture> Pictures { get; set; }
         #endregion
 
         public Student()
         {
             Index = $"IN{(BirthDay.Year*100000)+new Random().Next(100,201)}";
             PhoneNumber=GeneratePhoneNumber();
+            Pictures = new List<StudentPicture>();//So we don't get a null ref. exception;
         }
         public override string ToString() => Name + " " + Surname;
         #region Phone num generator

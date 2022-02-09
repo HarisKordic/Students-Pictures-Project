@@ -78,6 +78,12 @@
     <Compile Include="Forms\frmMainView.Designer.cs">
       <DependentUpon>frmMainView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmStudentPicture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStudentPicture.Designer.cs">
+      <DependentUpon>frmStudentPicture.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helpers\ImageConverter.cs" />
     <Compile Include="Main form.cs">
       <SubType>Form</SubType>
@@ -89,6 +95,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\frmMainView.resx">
       <DependentUpon>frmMainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStudentPicture.resx">
+      <DependentUpon>frmStudentPicture.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main form.resx">
       <DependentUpon>Main form.cs</DependentUpon>

@@ -140,7 +140,40 @@ namespace Source_code.Forms
                     }
                     else//Button for pictures;
                     {
+                        LoadPicturesToStudents();
+                        var studentSubject = dgv.Rows[e.RowIndex].DataBoundItem as StudentPassedSubject;
+                        new frmStudentPicture(studentSubject.Student).ShowDialog();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message + Environment.NewLine}{ex.InnerException?.Message}");
+            }
+        }
+        #endregion
 
+        #region Loading pictures for each student
+        private void LoadPicturesToStudents()
+        {
+            try
+            {
+                foreach (var student in _db.Students)
+                {
+                    foreach (var picture in _db.StudentsPictures)
+                    {
+                        if (student.Id == picture.Student.Id)//Coresponding student;
+                        {
+                            var addPic = new StudentPicture()
+                            {
+                                Id = picture.Id,
+                                Student = picture.Student,
+                                Picture = picture.Picture,
+                                Description = picture.Description,
+                                Date = picture.Date
+                            };
+                            student.Pictures.Add(addPic);
+                        }
                     }
                 }
             }
