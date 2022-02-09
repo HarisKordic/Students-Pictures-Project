@@ -110,5 +110,45 @@ namespace Source_code.Forms
             }
         }
         #endregion
+
+        #region Deleteing a subject or looking up student's pictures:
+        private void dgvStudentsSubjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                var dgv = sender as DataGridView;
+                if (dgv?.Columns[e.ColumnIndex] is DataGridViewButtonColumn)//?. because of possible Null ref. exception;
+                {
+                    var button = dgv.Columns[e.ColumnIndex] as DataGridViewButtonColumn;
+                    if (button?.Text == "Delete subject")//Button for deleteing;
+                    {
+                        var studentSubject = dgv.Rows[e.RowIndex].DataBoundItem as StudentPassedSubject;
+                        if (MessageBox.Show($"Are you sure you want to permanently delete {studentSubject.Subject}" +
+                                            $" from {studentSubject.Student} student?", "Warning you're " +
+                                "about to delete a record from the Data Base", MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Warning) == DialogResult.Yes)
+                        {
+                            _db.StudentsPassedSubjects.Remove(studentSubject);
+                            _db.SaveChanges();
+                            LoadStudentsSubjects(_db.StudentsPassedSubjects.ToList());
+                            MessageBox.Show("Record deleted successfully!");
+                        }
+                        else
+                            MessageBox.Show("Deletion successfully terminated!" +
+                                            " Your record won't be deleted.", "Operation stopped",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else//Button for pictures;
+                    {
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message + Environment.NewLine}{ex.InnerException?.Message}");
+            }
+        }
+        #endregion
     }
 }
