@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Source_code.Entitites;
 
 namespace Source_code.DataBase
 {
@@ -17,7 +18,8 @@ namespace Source_code.DataBase
         #endregion
 
         #region Tables
-
+        public DbSet<Gender> Genders { get; set; }
+        public DbSet<Student> Students { get; set; }
         #endregion
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Source_code.DataBase;
+using Source_code.Entitites;
 
 namespace Source_code
 {
