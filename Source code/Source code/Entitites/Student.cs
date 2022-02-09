@@ -28,7 +28,7 @@ namespace Source_code.Entitites
 
         public Student()
         {
-            Index = $"IN{(BirthDay.Year*10000)+new Random().Next(100,201)}";
+            Index = $"IN{(BirthDay.Year*100000)+new Random().Next(100,201)}";
             PhoneNumber=GeneratePhoneNumber();
         }
         public override string ToString() => Name + " " + Surname;
