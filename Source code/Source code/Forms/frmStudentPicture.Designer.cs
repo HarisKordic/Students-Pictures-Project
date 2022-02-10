@@ -64,7 +64,7 @@
             this.grpBoxAddNewPicture.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grpBoxAddNewPicture.Location = new System.Drawing.Point(12, 12);
             this.grpBoxAddNewPicture.Name = "grpBoxAddNewPicture";
-            this.grpBoxAddNewPicture.Size = new System.Drawing.Size(590, 576);
+            this.grpBoxAddNewPicture.Size = new System.Drawing.Size(614, 576);
             this.grpBoxAddNewPicture.TabIndex = 3;
             this.grpBoxAddNewPicture.TabStop = false;
             this.grpBoxAddNewPicture.Text = "Add new picture to student:";
@@ -77,6 +77,7 @@
             this.AddPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.AddPicture.TabIndex = 10;
             this.AddPicture.TabStop = false;
+            this.AddPicture.Click += new System.EventHandler(this.AddPicture_Click);
             // 
             // lblAddPic
             // 
@@ -94,7 +95,7 @@
             this.btnSavePicture.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSavePicture.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnSavePicture.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSavePicture.Location = new System.Drawing.Point(481, 539);
+            this.btnSavePicture.Location = new System.Drawing.Point(515, 539);
             this.btnSavePicture.Name = "btnSavePicture";
             this.btnSavePicture.Size = new System.Drawing.Size(93, 30);
             this.btnSavePicture.TabIndex = 8;
@@ -107,7 +108,7 @@
             this.txtBoxDescription.Location = new System.Drawing.Point(10, 297);
             this.txtBoxDescription.Multiline = true;
             this.txtBoxDescription.Name = "txtBoxDescription";
-            this.txtBoxDescription.Size = new System.Drawing.Size(564, 206);
+            this.txtBoxDescription.Size = new System.Drawing.Size(581, 206);
             this.txtBoxDescription.TabIndex = 5;
             // 
             // llblDescription
