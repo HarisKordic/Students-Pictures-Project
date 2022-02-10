@@ -30,26 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             this.grpBoxAddNewPicture = new System.Windows.Forms.GroupBox();
-            this.llblDescription = new System.Windows.Forms.Label();
-            this.txtBoxDescription = new System.Windows.Forms.TextBox();
-            this.btnSavePicture = new System.Windows.Forms.Button();
-            this.lblAddPic = new System.Windows.Forms.Label();
             this.AddPicture = new System.Windows.Forms.PictureBox();
+            this.lblAddPic = new System.Windows.Forms.Label();
+            this.btnSavePicture = new System.Windows.Forms.Button();
+            this.txtBoxDescription = new System.Windows.Forms.TextBox();
+            this.llblDescription = new System.Windows.Forms.Label();
             this.opfFindPicture = new System.Windows.Forms.OpenFileDialog();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpBoxDisplayPics = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Description = new System.Windows.Forms.Label();
+            this.lblDescription = new System.Windows.Forms.Label();
+            this.btnLeft = new System.Windows.Forms.Button();
+            this.DisplayPicture = new System.Windows.Forms.PictureBox();
             this.lblCurrentPicture = new System.Windows.Forms.Label();
             this.btnRight = new System.Windows.Forms.Button();
             this.lblDateOfPicture = new System.Windows.Forms.Label();
-            this.btnLeft = new System.Windows.Forms.Button();
-            this.lblDescription = new System.Windows.Forms.Label();
-            this.Description = new System.Windows.Forms.Label();
             this.grpBoxAddNewPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.grpBoxDisplayPics.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DisplayPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // grpBoxAddNewPicture
@@ -69,22 +69,23 @@
             this.grpBoxAddNewPicture.TabStop = false;
             this.grpBoxAddNewPicture.Text = "Add new picture to student:";
             // 
-            // llblDescription
+            // AddPicture
             // 
-            this.llblDescription.AutoSize = true;
-            this.llblDescription.Location = new System.Drawing.Point(6, 274);
-            this.llblDescription.Name = "llblDescription";
-            this.llblDescription.Size = new System.Drawing.Size(123, 20);
-            this.llblDescription.TabIndex = 4;
-            this.llblDescription.Text = "Add desrciption:";
+            this.AddPicture.Location = new System.Drawing.Point(154, 58);
+            this.AddPicture.Name = "AddPicture";
+            this.AddPicture.Size = new System.Drawing.Size(294, 225);
+            this.AddPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AddPicture.TabIndex = 10;
+            this.AddPicture.TabStop = false;
             // 
-            // txtBoxDescription
+            // lblAddPic
             // 
-            this.txtBoxDescription.Location = new System.Drawing.Point(10, 297);
-            this.txtBoxDescription.Multiline = true;
-            this.txtBoxDescription.Name = "txtBoxDescription";
-            this.txtBoxDescription.Size = new System.Drawing.Size(564, 206);
-            this.txtBoxDescription.TabIndex = 5;
+            this.lblAddPic.AutoSize = true;
+            this.lblAddPic.Location = new System.Drawing.Point(255, 34);
+            this.lblAddPic.Name = "lblAddPic";
+            this.lblAddPic.Size = new System.Drawing.Size(94, 20);
+            this.lblAddPic.TabIndex = 9;
+            this.lblAddPic.Text = "Add picture:";
             // 
             // btnSavePicture
             // 
@@ -101,23 +102,22 @@
             this.btnSavePicture.UseVisualStyleBackColor = false;
             this.btnSavePicture.Click += new System.EventHandler(this.btnSavePicture_Click);
             // 
-            // lblAddPic
+            // txtBoxDescription
             // 
-            this.lblAddPic.AutoSize = true;
-            this.lblAddPic.Location = new System.Drawing.Point(255, 34);
-            this.lblAddPic.Name = "lblAddPic";
-            this.lblAddPic.Size = new System.Drawing.Size(94, 20);
-            this.lblAddPic.TabIndex = 9;
-            this.lblAddPic.Text = "Add picture:";
+            this.txtBoxDescription.Location = new System.Drawing.Point(10, 297);
+            this.txtBoxDescription.Multiline = true;
+            this.txtBoxDescription.Name = "txtBoxDescription";
+            this.txtBoxDescription.Size = new System.Drawing.Size(564, 206);
+            this.txtBoxDescription.TabIndex = 5;
             // 
-            // AddPicture
+            // llblDescription
             // 
-            this.AddPicture.Location = new System.Drawing.Point(154, 58);
-            this.AddPicture.Name = "AddPicture";
-            this.AddPicture.Size = new System.Drawing.Size(294, 225);
-            this.AddPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.AddPicture.TabIndex = 10;
-            this.AddPicture.TabStop = false;
+            this.llblDescription.AutoSize = true;
+            this.llblDescription.Location = new System.Drawing.Point(6, 274);
+            this.llblDescription.Name = "llblDescription";
+            this.llblDescription.Size = new System.Drawing.Size(123, 20);
+            this.llblDescription.TabIndex = 4;
+            this.llblDescription.Text = "Add desrciption:";
             // 
             // opfFindPicture
             // 
@@ -133,7 +133,7 @@
             this.grpBoxDisplayPics.Controls.Add(this.Description);
             this.grpBoxDisplayPics.Controls.Add(this.lblDescription);
             this.grpBoxDisplayPics.Controls.Add(this.btnLeft);
-            this.grpBoxDisplayPics.Controls.Add(this.pictureBox1);
+            this.grpBoxDisplayPics.Controls.Add(this.DisplayPicture);
             this.grpBoxDisplayPics.Controls.Add(this.lblCurrentPicture);
             this.grpBoxDisplayPics.Controls.Add(this.btnRight);
             this.grpBoxDisplayPics.Controls.Add(this.lblDateOfPicture);
@@ -146,21 +146,49 @@
             this.grpBoxDisplayPics.TabStop = false;
             this.grpBoxDisplayPics.Text = "Student\'s avaliable pictures:";
             // 
-            // pictureBox1
+            // Description
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(288, 45);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(425, 326);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
+            this.Description.Location = new System.Drawing.Point(6, 436);
+            this.Description.Name = "Description";
+            this.Description.Size = new System.Drawing.Size(93, 20);
+            this.Description.TabIndex = 12;
+            this.Description.Text = "Description:";
+            // 
+            // lblDescription
+            // 
+            this.lblDescription.Location = new System.Drawing.Point(6, 456);
+            this.lblDescription.Name = "lblDescription";
+            this.lblDescription.Size = new System.Drawing.Size(900, 113);
+            this.lblDescription.TabIndex = 11;
+            // 
+            // btnLeft
+            // 
+            this.btnLeft.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLeft.FlatAppearance.BorderSize = 100;
+            this.btnLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnLeft.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnLeft.Location = new System.Drawing.Point(179, 366);
+            this.btnLeft.Name = "btnLeft";
+            this.btnLeft.Size = new System.Drawing.Size(93, 30);
+            this.btnLeft.TabIndex = 11;
+            this.btnLeft.Text = "<==";
+            this.btnLeft.UseVisualStyleBackColor = false;
+            // 
+            // DisplayPicture
+            // 
+            this.DisplayPicture.Location = new System.Drawing.Point(288, 70);
+            this.DisplayPicture.Name = "DisplayPicture";
+            this.DisplayPicture.Size = new System.Drawing.Size(425, 326);
+            this.DisplayPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.DisplayPicture.TabIndex = 10;
+            this.DisplayPicture.TabStop = false;
             // 
             // lblCurrentPicture
             // 
-            this.lblCurrentPicture.AutoSize = true;
-            this.lblCurrentPicture.Location = new System.Drawing.Point(489, 22);
+            this.lblCurrentPicture.Location = new System.Drawing.Point(284, 22);
             this.lblCurrentPicture.Name = "lblCurrentPicture";
-            this.lblCurrentPicture.Size = new System.Drawing.Size(26, 20);
+            this.lblCurrentPicture.Size = new System.Drawing.Size(429, 45);
             this.lblCurrentPicture.TabIndex = 9;
             this.lblCurrentPicture.Text = "cp";
             // 
@@ -171,7 +199,7 @@
             this.btnRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnRight.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnRight.Location = new System.Drawing.Point(730, 341);
+            this.btnRight.Location = new System.Drawing.Point(730, 366);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(93, 30);
             this.btnRight.TabIndex = 8;
@@ -181,42 +209,11 @@
             // lblDateOfPicture
             // 
             this.lblDateOfPicture.AutoSize = true;
-            this.lblDateOfPicture.Location = new System.Drawing.Point(430, 374);
+            this.lblDateOfPicture.Location = new System.Drawing.Point(430, 399);
             this.lblDateOfPicture.Name = "lblDateOfPicture";
             this.lblDateOfPicture.Size = new System.Drawing.Size(48, 20);
             this.lblDateOfPicture.TabIndex = 4;
             this.lblDateOfPicture.Text = "Date:";
-            // 
-            // btnLeft
-            // 
-            this.btnLeft.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLeft.FlatAppearance.BorderSize = 100;
-            this.btnLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnLeft.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnLeft.Location = new System.Drawing.Point(179, 341);
-            this.btnLeft.Name = "btnLeft";
-            this.btnLeft.Size = new System.Drawing.Size(93, 30);
-            this.btnLeft.TabIndex = 11;
-            this.btnLeft.Text = "<==";
-            this.btnLeft.UseVisualStyleBackColor = false;
-            // 
-            // lblDescription
-            // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(21, 468);
-            this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(0, 20);
-            this.lblDescription.TabIndex = 11;
-            // 
-            // Description
-            // 
-            this.Description.AutoSize = true;
-            this.Description.Location = new System.Drawing.Point(6, 436);
-            this.Description.Name = "Description";
-            this.Description.Size = new System.Drawing.Size(93, 20);
-            this.Description.TabIndex = 12;
-            this.Description.Text = "Description:";
             // 
             // frmStudentPicture
             // 
@@ -229,13 +226,14 @@
             this.Name = "frmStudentPicture";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Student\'s pictures";
+            this.Load += new System.EventHandler(this.frmStudentPicture_Load);
             this.grpBoxAddNewPicture.ResumeLayout(false);
             this.grpBoxAddNewPicture.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.grpBoxDisplayPics.ResumeLayout(false);
             this.grpBoxDisplayPics.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DisplayPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -253,7 +251,7 @@
         private System.Windows.Forms.GroupBox grpBoxDisplayPics;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.Button btnLeft;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox DisplayPicture;
         private System.Windows.Forms.Label lblCurrentPicture;
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.Label lblDateOfPicture;
