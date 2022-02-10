@@ -45,6 +45,7 @@
             this.lblCurrentPicture = new System.Windows.Forms.Label();
             this.btnRight = new System.Windows.Forms.Button();
             this.lblDateOfPicture = new System.Windows.Forms.Label();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.grpBoxAddNewPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
@@ -55,6 +56,7 @@
             // grpBoxAddNewPicture
             // 
             this.grpBoxAddNewPicture.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.grpBoxAddNewPicture.Controls.Add(this.btnEdit);
             this.grpBoxAddNewPicture.Controls.Add(this.AddPicture);
             this.grpBoxAddNewPicture.Controls.Add(this.lblAddPic);
             this.grpBoxAddNewPicture.Controls.Add(this.btnSavePicture);
@@ -218,6 +220,21 @@
             this.lblDateOfPicture.TabIndex = 4;
             this.lblDateOfPicture.Text = "Date:";
             // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEdit.FlatAppearance.BorderSize = 100;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEdit.Location = new System.Drawing.Point(10, 539);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(93, 30);
+            this.btnEdit.TabIndex = 11;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
             // frmStudentPicture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,5 +276,6 @@
         private System.Windows.Forms.Button btnRight;
         private System.Windows.Forms.Label lblDateOfPicture;
         private System.Windows.Forms.Label Description;
+        private System.Windows.Forms.Button btnEdit;
     }
 }

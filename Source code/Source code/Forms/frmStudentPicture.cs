@@ -155,5 +155,14 @@ namespace Source_code.Forms
             }
         }
         #endregion
+
+        #region Editing added picures
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmChoosePictureToEdit(this.Student).ShowDialog();
+            this.Show();
+        }
+        #endregion
     }
 }
