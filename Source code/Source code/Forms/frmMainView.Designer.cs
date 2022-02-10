@@ -28,27 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpBoxStudents = new System.Windows.Forms.GroupBox();
+            this.btnSaveStudentToFile = new System.Windows.Forms.Button();
             this.txtBoxStudentSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvStudents = new System.Windows.Forms.DataGridView();
-            this.grpBoxStudentsSubjects = new System.Windows.Forms.GroupBox();
-            this.txtBoxSubjectSearch = new System.Windows.Forms.TextBox();
-            this.lblSearch = new System.Windows.Forms.Label();
-            this.dgvStudentsSubjects = new System.Windows.Forms.DataGridView();
-            this.Student = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeleteSubject = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ShowPictures = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,8 +50,17 @@
             this.AcademicYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSaveStudentToFile = new System.Windows.Forms.Button();
+            this.grpBoxStudentsSubjects = new System.Windows.Forms.GroupBox();
             this.btnSaveStudentsSubjectsToFile = new System.Windows.Forms.Button();
+            this.txtBoxSubjectSearch = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.dgvStudentsSubjects = new System.Windows.Forms.DataGridView();
+            this.Student = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeleteSubject = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ShowPictures = new System.Windows.Forms.DataGridViewButtonColumn();
             this.grpBoxStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.grpBoxStudentsSubjects.SuspendLayout();
@@ -81,6 +82,21 @@
             this.grpBoxStudents.TabIndex = 1;
             this.grpBoxStudents.TabStop = false;
             this.grpBoxStudents.Text = "Students";
+            // 
+            // btnSaveStudentToFile
+            // 
+            this.btnSaveStudentToFile.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSaveStudentToFile.FlatAppearance.BorderSize = 100;
+            this.btnSaveStudentToFile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSaveStudentToFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnSaveStudentToFile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSaveStudentToFile.Location = new System.Drawing.Point(1271, 25);
+            this.btnSaveStudentToFile.Name = "btnSaveStudentToFile";
+            this.btnSaveStudentToFile.Size = new System.Drawing.Size(93, 30);
+            this.btnSaveStudentToFile.TabIndex = 7;
+            this.btnSaveStudentToFile.Text = "Save to file";
+            this.btnSaveStudentToFile.UseVisualStyleBackColor = false;
+            this.btnSaveStudentToFile.Click += new System.EventHandler(this.btnSaveStudentToFile_Click);
             // 
             // txtBoxStudentSearch
             // 
@@ -105,14 +121,14 @@
             // 
             this.dgvStudents.AllowUserToDeleteRows = false;
             this.dgvStudents.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStudents.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Namee,
@@ -124,164 +140,36 @@
             this.AcademicYear,
             this.Email,
             this.PhoneNumber});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStudents.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStudents.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvStudents.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvStudents.Location = new System.Drawing.Point(6, 57);
             this.dgvStudents.Name = "dgvStudents";
             this.dgvStudents.ReadOnly = true;
             this.dgvStudents.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStudents.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.dgvStudents.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStudents.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.dgvStudents.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvStudents.RowTemplate.Height = 30;
             this.dgvStudents.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvStudents.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStudents.Size = new System.Drawing.Size(1358, 266);
             this.dgvStudents.TabIndex = 0;
-            // 
-            // grpBoxStudentsSubjects
-            // 
-            this.grpBoxStudentsSubjects.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.grpBoxStudentsSubjects.Controls.Add(this.btnSaveStudentsSubjectsToFile);
-            this.grpBoxStudentsSubjects.Controls.Add(this.txtBoxSubjectSearch);
-            this.grpBoxStudentsSubjects.Controls.Add(this.lblSearch);
-            this.grpBoxStudentsSubjects.Controls.Add(this.dgvStudentsSubjects);
-            this.grpBoxStudentsSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.grpBoxStudentsSubjects.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.grpBoxStudentsSubjects.Location = new System.Drawing.Point(12, 366);
-            this.grpBoxStudentsSubjects.Name = "grpBoxStudentsSubjects";
-            this.grpBoxStudentsSubjects.Size = new System.Drawing.Size(1370, 329);
-            this.grpBoxStudentsSubjects.TabIndex = 2;
-            this.grpBoxStudentsSubjects.TabStop = false;
-            this.grpBoxStudentsSubjects.Text = "Students and passed subjects";
-            // 
-            // txtBoxSubjectSearch
-            // 
-            this.txtBoxSubjectSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtBoxSubjectSearch.Location = new System.Drawing.Point(186, 36);
-            this.txtBoxSubjectSearch.Multiline = true;
-            this.txtBoxSubjectSearch.Name = "txtBoxSubjectSearch";
-            this.txtBoxSubjectSearch.Size = new System.Drawing.Size(341, 17);
-            this.txtBoxSubjectSearch.TabIndex = 5;
-            this.txtBoxSubjectSearch.TextChanged += new System.EventHandler(this.txtBoxSubjectSearch_TextChanged);
-            // 
-            // lblSearch
-            // 
-            this.lblSearch.AutoSize = true;
-            this.lblSearch.Location = new System.Drawing.Point(6, 34);
-            this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(183, 20);
-            this.lblSearch.TabIndex = 2;
-            this.lblSearch.Text = "Search by subject name:";
-            // 
-            // dgvStudentsSubjects
-            // 
-            this.dgvStudentsSubjects.AllowUserToDeleteRows = false;
-            this.dgvStudentsSubjects.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStudentsSubjects.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvStudentsSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStudentsSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Student,
-            this.Subject,
-            this.Grade,
-            this.Date,
-            this.DeleteSubject,
-            this.ShowPictures});
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.AppWorkspace;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStudentsSubjects.DefaultCellStyle = dataGridViewCellStyle13;
-            this.dgvStudentsSubjects.GridColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvStudentsSubjects.Location = new System.Drawing.Point(6, 57);
-            this.dgvStudentsSubjects.Name = "dgvStudentsSubjects";
-            this.dgvStudentsSubjects.ReadOnly = true;
-            this.dgvStudentsSubjects.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStudentsSubjects.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            this.dgvStudentsSubjects.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvStudentsSubjects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStudentsSubjects.Size = new System.Drawing.Size(1358, 266);
-            this.dgvStudentsSubjects.TabIndex = 1;
-            this.dgvStudentsSubjects.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentsSubjects_CellContentClick);
-            // 
-            // Student
-            // 
-            this.Student.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Student.DataPropertyName = "Student";
-            this.Student.HeaderText = "Student";
-            this.Student.Name = "Student";
-            this.Student.ReadOnly = true;
-            // 
-            // Subject
-            // 
-            this.Subject.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Subject.DataPropertyName = "Subject";
-            this.Subject.HeaderText = "Subject";
-            this.Subject.Name = "Subject";
-            this.Subject.ReadOnly = true;
-            // 
-            // Grade
-            // 
-            this.Grade.DataPropertyName = "Grade";
-            this.Grade.HeaderText = "Grade";
-            this.Grade.Name = "Grade";
-            this.Grade.ReadOnly = true;
-            // 
-            // Date
-            // 
-            this.Date.DataPropertyName = "Date";
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            // 
-            // DeleteSubject
-            // 
-            this.DeleteSubject.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DeleteSubject.HeaderText = "Delete subject";
-            this.DeleteSubject.Name = "DeleteSubject";
-            this.DeleteSubject.ReadOnly = true;
-            this.DeleteSubject.Text = "Delete subject";
-            this.DeleteSubject.UseColumnTextForButtonValue = true;
-            // 
-            // ShowPictures
-            // 
-            this.ShowPictures.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ShowPictures.HeaderText = "Show pictures";
-            this.ShowPictures.Name = "ShowPictures";
-            this.ShowPictures.ReadOnly = true;
-            this.ShowPictures.Text = "Show student\'s pictures";
-            this.ShowPictures.UseColumnTextForButtonValue = true;
             // 
             // Namee
             // 
@@ -350,20 +238,21 @@
             this.PhoneNumber.ReadOnly = true;
             this.PhoneNumber.Width = 110;
             // 
-            // btnSaveStudentToFile
+            // grpBoxStudentsSubjects
             // 
-            this.btnSaveStudentToFile.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSaveStudentToFile.FlatAppearance.BorderSize = 100;
-            this.btnSaveStudentToFile.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSaveStudentToFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnSaveStudentToFile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSaveStudentToFile.Location = new System.Drawing.Point(1271, 25);
-            this.btnSaveStudentToFile.Name = "btnSaveStudentToFile";
-            this.btnSaveStudentToFile.Size = new System.Drawing.Size(93, 30);
-            this.btnSaveStudentToFile.TabIndex = 7;
-            this.btnSaveStudentToFile.Text = "Save to file";
-            this.btnSaveStudentToFile.UseVisualStyleBackColor = false;
-            this.btnSaveStudentToFile.Click += new System.EventHandler(this.btnSaveStudentToFile_Click);
+            this.grpBoxStudentsSubjects.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.grpBoxStudentsSubjects.Controls.Add(this.btnSaveStudentsSubjectsToFile);
+            this.grpBoxStudentsSubjects.Controls.Add(this.txtBoxSubjectSearch);
+            this.grpBoxStudentsSubjects.Controls.Add(this.lblSearch);
+            this.grpBoxStudentsSubjects.Controls.Add(this.dgvStudentsSubjects);
+            this.grpBoxStudentsSubjects.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.grpBoxStudentsSubjects.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.grpBoxStudentsSubjects.Location = new System.Drawing.Point(12, 366);
+            this.grpBoxStudentsSubjects.Name = "grpBoxStudentsSubjects";
+            this.grpBoxStudentsSubjects.Size = new System.Drawing.Size(1370, 329);
+            this.grpBoxStudentsSubjects.TabIndex = 2;
+            this.grpBoxStudentsSubjects.TabStop = false;
+            this.grpBoxStudentsSubjects.Text = "Students and passed subjects";
             // 
             // btnSaveStudentsSubjectsToFile
             // 
@@ -379,6 +268,124 @@
             this.btnSaveStudentsSubjectsToFile.Text = "Save to file";
             this.btnSaveStudentsSubjectsToFile.UseVisualStyleBackColor = false;
             this.btnSaveStudentsSubjectsToFile.Click += new System.EventHandler(this.btnSaveStudentsSubjectsToFile_Click);
+            // 
+            // txtBoxSubjectSearch
+            // 
+            this.txtBoxSubjectSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.txtBoxSubjectSearch.Location = new System.Drawing.Point(186, 36);
+            this.txtBoxSubjectSearch.Multiline = true;
+            this.txtBoxSubjectSearch.Name = "txtBoxSubjectSearch";
+            this.txtBoxSubjectSearch.Size = new System.Drawing.Size(341, 17);
+            this.txtBoxSubjectSearch.TabIndex = 5;
+            this.txtBoxSubjectSearch.TextChanged += new System.EventHandler(this.txtBoxSubjectSearch_TextChanged);
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(6, 34);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(183, 20);
+            this.lblSearch.TabIndex = 2;
+            this.lblSearch.Text = "Search by subject name:";
+            // 
+            // dgvStudentsSubjects
+            // 
+            this.dgvStudentsSubjects.AllowUserToDeleteRows = false;
+            this.dgvStudentsSubjects.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStudentsSubjects.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvStudentsSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudentsSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Student,
+            this.Subject,
+            this.Grade,
+            this.Date,
+            this.DeleteSubject,
+            this.ShowPictures});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStudentsSubjects.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvStudentsSubjects.GridColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvStudentsSubjects.Location = new System.Drawing.Point(6, 57);
+            this.dgvStudentsSubjects.Name = "dgvStudentsSubjects";
+            this.dgvStudentsSubjects.ReadOnly = true;
+            this.dgvStudentsSubjects.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStudentsSubjects.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.dgvStudentsSubjects.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvStudentsSubjects.RowTemplate.Height = 35;
+            this.dgvStudentsSubjects.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvStudentsSubjects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvStudentsSubjects.Size = new System.Drawing.Size(1358, 266);
+            this.dgvStudentsSubjects.TabIndex = 1;
+            this.dgvStudentsSubjects.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentsSubjects_CellContentClick);
+            // 
+            // Student
+            // 
+            this.Student.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Student.DataPropertyName = "Student";
+            this.Student.HeaderText = "Student";
+            this.Student.Name = "Student";
+            this.Student.ReadOnly = true;
+            // 
+            // Subject
+            // 
+            this.Subject.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Subject.DataPropertyName = "Subject";
+            this.Subject.HeaderText = "Subject";
+            this.Subject.Name = "Subject";
+            this.Subject.ReadOnly = true;
+            // 
+            // Grade
+            // 
+            this.Grade.DataPropertyName = "Grade";
+            this.Grade.HeaderText = "Grade";
+            this.Grade.Name = "Grade";
+            this.Grade.ReadOnly = true;
+            // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "Date";
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            // 
+            // DeleteSubject
+            // 
+            this.DeleteSubject.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DeleteSubject.HeaderText = "Delete subject";
+            this.DeleteSubject.Name = "DeleteSubject";
+            this.DeleteSubject.ReadOnly = true;
+            this.DeleteSubject.Text = "Delete subject";
+            this.DeleteSubject.UseColumnTextForButtonValue = true;
+            // 
+            // ShowPictures
+            // 
+            this.ShowPictures.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ShowPictures.HeaderText = "Show pictures";
+            this.ShowPictures.Name = "ShowPictures";
+            this.ShowPictures.ReadOnly = true;
+            this.ShowPictures.Text = "Show student\'s pictures";
+            this.ShowPictures.UseColumnTextForButtonValue = true;
             // 
             // frmMainView
             // 
