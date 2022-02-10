@@ -175,6 +175,7 @@
             this.btnLeft.TabIndex = 11;
             this.btnLeft.Text = "<==";
             this.btnLeft.UseVisualStyleBackColor = false;
+            this.btnLeft.Click += new System.EventHandler(this.btnLeft_Click);
             // 
             // DisplayPicture
             // 
@@ -206,6 +207,7 @@
             this.btnRight.TabIndex = 8;
             this.btnRight.Text = "==>";
             this.btnRight.UseVisualStyleBackColor = false;
+            this.btnRight.Click += new System.EventHandler(this.btnRight_Click);
             // 
             // lblDateOfPicture
             // 

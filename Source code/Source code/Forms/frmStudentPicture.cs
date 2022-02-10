@@ -114,5 +114,46 @@ namespace Source_code.Forms
             }
         }
         #endregion
+
+        #region Navigation of pictures
+        private void btnRight_Click(object sender, EventArgs e)
+        {
+            Counter++;
+            if (Counter >= 0 && Counter <= this.Student.Pictures.Count - 1)
+            {
+                DisplayPicture.Image = Helpers.ImageConverter.ByteToImage(Student.Pictures
+                    [Counter].Picture);
+                lblCurrentPicture.Text = $"Showing picture {Counter + 1} out of {Student.Pictures.Count}";
+                lblDescription.Text = Student.Pictures[Counter].Description;
+                lblDateOfPicture.Text = $"Date: {Student.Pictures[Counter].Date}";
+            }
+            else
+            {
+                MessageBox.Show("Dear user, you got to the last picture, you can't " +
+                                "go any further.", "Invalid action", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                Counter--;
+            }
+        }
+        private void btnLeft_Click(object sender, EventArgs e)
+        {
+            Counter--;
+            if(Counter >= 0 && Counter<=this.Student.Pictures.Count-1)
+            {
+                DisplayPicture.Image = Helpers.ImageConverter.ByteToImage(Student.Pictures
+                    [Counter].Picture);
+                lblCurrentPicture.Text = $"Showing picture {Counter + 1} out of {Student.Pictures.Count}";
+                lblDescription.Text = Student.Pictures[Counter].Description;
+                lblDateOfPicture.Text = $"Date: {Student.Pictures[Counter].Date}";
+            }
+            else
+            {
+                MessageBox.Show("Dear user, you got to the first picture, you can't " +
+                                "go any more backwards.", "Invalid action", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                Counter=0;
+            }
+        }
+        #endregion
     }
 }
