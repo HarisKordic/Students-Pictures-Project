@@ -130,6 +130,7 @@
             this.dgvStudentsPictures.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStudentsPictures.Size = new System.Drawing.Size(679, 206);
             this.dgvStudentsPictures.TabIndex = 8;
+            this.dgvStudentsPictures.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentsPictures_CellClick);
             // 
             // Ssudent
             // 
@@ -176,6 +177,7 @@
             this.Name = "frmChoosePictureToEdit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmChoosePictureToEdit";
+            this.Load += new System.EventHandler(this.frmChoosePictureToEdit_Load);
             this.grpBoxStudents.ResumeLayout(false);
             this.grpBoxStudents.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudentsPictures)).EndInit();
