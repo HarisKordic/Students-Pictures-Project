@@ -72,11 +72,11 @@
     <Compile Include="Entitites\Student.cs" />
     <Compile Include="Entitites\StudentPicture.cs" />
     <Compile Include="Entitites\Subject.cs" />
-    <Compile Include="Forms\frmChoosePictureToEdit.cs">
+    <Compile Include="Forms\frmEditOrDeletePicture.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmChoosePictureToEdit.Designer.cs">
-      <DependentUpon>frmChoosePictureToEdit.cs</DependentUpon>
+    <Compile Include="Forms\frmEditOrDeletePicture.Designer.cs">
+      <DependentUpon>frmEditOrDeletePicture.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmMainView.cs">
       <SubType>Form</SubType>
@@ -100,8 +100,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\frmChoosePictureToEdit.resx">
-      <DependentUpon>frmChoosePictureToEdit.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmEditOrDeletePicture.resx">
+      <DependentUpon>frmEditOrDeletePicture.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMainView.resx">
       <DependentUpon>frmMainView.cs</DependentUpon>

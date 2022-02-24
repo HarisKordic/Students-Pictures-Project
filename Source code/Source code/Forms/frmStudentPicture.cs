@@ -160,7 +160,7 @@ namespace Source_code.Forms
         private void btnEdit_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new frmChoosePictureToEdit(this.Student).ShowDialog();
+            new frmEditOrDeletePicture(this.Student).ShowDialog();
             this.Show();
         }
         #endregion
