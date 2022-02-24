@@ -39,6 +39,8 @@
             this.btnNext = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.lblShowDate = new System.Windows.Forms.Label();
             this.grpBoxStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -46,6 +48,8 @@
             // grpBoxStudents
             // 
             this.grpBoxStudents.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.grpBoxStudents.Controls.Add(this.lblShowDate);
+            this.grpBoxStudents.Controls.Add(this.dtpDate);
             this.grpBoxStudents.Controls.Add(this.btnDelete);
             this.grpBoxStudents.Controls.Add(this.btnSave);
             this.grpBoxStudents.Controls.Add(this.btnNext);
@@ -167,12 +171,29 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDelete.Location = new System.Drawing.Point(106, 405);
+            this.btnDelete.Location = new System.Drawing.Point(471, 405);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(90, 28);
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // dtpDate
+            // 
+            this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dtpDate.Location = new System.Drawing.Point(361, 73);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(200, 23);
+            this.dtpDate.TabIndex = 12;
+            // 
+            // lblShowDate
+            // 
+            this.lblShowDate.AutoSize = true;
+            this.lblShowDate.Location = new System.Drawing.Point(60, 76);
+            this.lblShowDate.Name = "lblShowDate";
+            this.lblShowDate.Size = new System.Drawing.Size(48, 20);
+            this.lblShowDate.TabIndex = 13;
+            this.lblShowDate.Text = "Date:";
             // 
             // frmEditOrDeletePicture
             // 
@@ -204,5 +225,7 @@
         private System.Windows.Forms.TextBox txtBoxDescritpion;
         private System.Windows.Forms.Label lblDescritpion;
         private System.Windows.Forms.Label lblDate;
+        private System.Windows.Forms.Label lblShowDate;
+        private System.Windows.Forms.DateTimePicker dtpDate;
     }
 }
