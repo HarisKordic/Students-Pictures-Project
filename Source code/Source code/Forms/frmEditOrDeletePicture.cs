@@ -19,7 +19,7 @@ namespace Source_code.Forms
         private Student Student;
         public frmEditOrDeletePicture(Student student)
         {
-           
+            InitializeComponent();
         }
         #endregion
 

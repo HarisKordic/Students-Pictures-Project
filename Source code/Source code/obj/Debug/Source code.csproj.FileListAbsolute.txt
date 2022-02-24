@@ -21,4 +21,4 @@ C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\bin\Debu
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source code.csproj.CopyComplete
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source_code.Forms.frmMainView.resources
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source_code.Forms.frmStudentPicture.resources
-C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source_code.Forms.frmChoosePictureToEdit.resources
+C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source_code.Forms.frmEditOrDeletePicture.resources
