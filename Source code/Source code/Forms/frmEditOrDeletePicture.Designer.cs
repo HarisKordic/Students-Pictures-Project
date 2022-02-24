@@ -34,27 +34,25 @@
             this.lblDescritpion = new System.Windows.Forms.Label();
             this.txtBoxDescritpion = new System.Windows.Forms.TextBox();
             this.lblPicture = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbPicture = new System.Windows.Forms.PictureBox();
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
-            this.lblShowDate = new System.Windows.Forms.Label();
             this.grpBoxStudents.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
             this.SuspendLayout();
             // 
             // grpBoxStudents
             // 
             this.grpBoxStudents.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.grpBoxStudents.Controls.Add(this.lblShowDate);
             this.grpBoxStudents.Controls.Add(this.dtpDate);
             this.grpBoxStudents.Controls.Add(this.btnDelete);
             this.grpBoxStudents.Controls.Add(this.btnSave);
             this.grpBoxStudents.Controls.Add(this.btnNext);
             this.grpBoxStudents.Controls.Add(this.btnPrevious);
-            this.grpBoxStudents.Controls.Add(this.pictureBox1);
+            this.grpBoxStudents.Controls.Add(this.pbPicture);
             this.grpBoxStudents.Controls.Add(this.lblPicture);
             this.grpBoxStudents.Controls.Add(this.txtBoxDescritpion);
             this.grpBoxStudents.Controls.Add(this.lblDescritpion);
@@ -114,13 +112,14 @@
             this.lblPicture.TabIndex = 7;
             this.lblPicture.Text = "Picture:";
             // 
-            // pictureBox1
+            // pbPicture
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(567, 87);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(353, 261);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.pbPicture.Location = new System.Drawing.Point(567, 87);
+            this.pbPicture.Name = "pbPicture";
+            this.pbPicture.Size = new System.Drawing.Size(353, 261);
+            this.pbPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPicture.TabIndex = 8;
+            this.pbPicture.TabStop = false;
             // 
             // btnPrevious
             // 
@@ -181,19 +180,10 @@
             // dtpDate
             // 
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.dtpDate.Location = new System.Drawing.Point(361, 73);
+            this.dtpDate.Location = new System.Drawing.Point(60, 73);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(200, 23);
+            this.dtpDate.Size = new System.Drawing.Size(175, 23);
             this.dtpDate.TabIndex = 12;
-            // 
-            // lblShowDate
-            // 
-            this.lblShowDate.AutoSize = true;
-            this.lblShowDate.Location = new System.Drawing.Point(60, 76);
-            this.lblShowDate.Name = "lblShowDate";
-            this.lblShowDate.Size = new System.Drawing.Size(48, 20);
-            this.lblShowDate.TabIndex = 13;
-            this.lblShowDate.Text = "Date:";
             // 
             // frmEditOrDeletePicture
             // 
@@ -205,9 +195,10 @@
             this.Name = "frmEditOrDeletePicture";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit student\'s pictures";
+            this.Load += new System.EventHandler(this.frmEditOrDeletePicture_Load);
             this.grpBoxStudents.ResumeLayout(false);
             this.grpBoxStudents.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,12 +211,11 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnPrevious;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbPicture;
         private System.Windows.Forms.Label lblPicture;
         private System.Windows.Forms.TextBox txtBoxDescritpion;
         private System.Windows.Forms.Label lblDescritpion;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Label lblShowDate;
         private System.Windows.Forms.DateTimePicker dtpDate;
     }
 }
