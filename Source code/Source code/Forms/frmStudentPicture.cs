@@ -19,11 +19,14 @@ namespace Source_code.Forms
 
         private ConnectionToDb _db = Db.DataBase;
         private Student Student;
-        private int Counter = 0;//For enumerating through  multiple pictures;
+        private int Counter;//For enumerating through  multiple pictures;
         public frmStudentPicture(Student student)
         {
             InitializeComponent();
             this.Student = student;
+            Counter = 0;
+            student.Pictures = _db.StudentsPictures.Where(p =>
+                p.Student.Id == this.Student.Id).ToList();//For loading correct pics to each student;
         }
         #endregion
 
@@ -131,7 +134,7 @@ namespace Source_code.Forms
             {
                 MessageBox.Show("Dear user, you got to the last picture, you can't " +
                                 "go any further.", "Invalid action", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                    MessageBoxIcon.Information);
                 Counter--;
             }
         }
@@ -150,7 +153,7 @@ namespace Source_code.Forms
             {
                 MessageBox.Show("Dear user, you got to the first picture, you can't " +
                                 "go any more backwards.", "Invalid action", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
+                    MessageBoxIcon.Information);
                 Counter=0;
             }
         }

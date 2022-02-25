@@ -17,11 +17,12 @@ namespace Source_code.Forms
         #region Form
         private ConnectionToDb _db = Db.DataBase;
         private Student Student;
-        private static int Counter = 0;
+        private  int Counter;
         public frmEditOrDeletePicture(Student student)
         {
             InitializeComponent();
             this.Student = student;
+            Counter = 0;
             this.Student.Pictures = _db.StudentsPictures.Where(p => 
                 p.Student.Id == this.Student.Id).ToList();
         }
@@ -50,5 +51,43 @@ namespace Source_code.Forms
         }
         #endregion
 
+        #region Navigating to next and previous picture
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            Counter++;
+            if (Counter >= 0 && Counter <= Student.Pictures.Count - 1)
+            {
+                pbPicture.Image = Helpers.ImageConverter.ByteToImage(Student.
+                    Pictures[Counter].Picture);
+                txtBoxDescritpion.Text = Student.Pictures[Counter].Description;
+                dtpDate.Value = Student.Pictures[Counter].Date;
+            }
+            else//If out of range 'Count';
+            {
+                MessageBox.Show("Dear user, you got to the end (last picture)," +
+                                "please move backwards.", "Invalid move",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Counter--;
+            }
+        }
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            Counter--;
+            if (Counter >= 0 && Counter <= Student.Pictures.Count - 1)
+            {
+                pbPicture.Image = Helpers.ImageConverter.ByteToImage(Student.
+                    Pictures[Counter].Picture);
+                txtBoxDescritpion.Text = Student.Pictures[Counter].Description;
+                dtpDate.Value = Student.Pictures[Counter].Date;
+            }
+            else//If negative;
+            {
+                MessageBox.Show("Dear user, you got to the end (first picture)," +
+                                "please move forwards.", "Invalid move",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Counter=0;
+            }
+        }
+        #endregion
     }
 }
