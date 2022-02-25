@@ -185,5 +185,14 @@ namespace Source_code.Forms
             }
         }
         #endregion
+
+        #region Adding new Students
+        private void btnAddStudents_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmAddNewStudent().ShowDialog();
+            this.Show();
+        }
+        #endregion
     }
 }

@@ -61,6 +61,7 @@
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteSubject = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ShowPictures = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnAddStudents = new System.Windows.Forms.Button();
             this.grpBoxStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.grpBoxStudentsSubjects.SuspendLayout();
@@ -70,6 +71,7 @@
             // grpBoxStudents
             // 
             this.grpBoxStudents.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.grpBoxStudents.Controls.Add(this.btnAddStudents);
             this.grpBoxStudents.Controls.Add(this.btnSaveStudentToFile);
             this.grpBoxStudents.Controls.Add(this.txtBoxStudentSearch);
             this.grpBoxStudents.Controls.Add(this.label1);
@@ -388,6 +390,21 @@
             this.ShowPictures.Text = "Show student\'s pictures";
             this.ShowPictures.UseColumnTextForButtonValue = true;
             // 
+            // btnAddStudents
+            // 
+            this.btnAddStudents.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAddStudents.FlatAppearance.BorderSize = 100;
+            this.btnAddStudents.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAddStudents.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddStudents.Location = new System.Drawing.Point(1499, 25);
+            this.btnAddStudents.Name = "btnAddStudents";
+            this.btnAddStudents.Size = new System.Drawing.Size(137, 30);
+            this.btnAddStudents.TabIndex = 8;
+            this.btnAddStudents.Text = "Add new students";
+            this.btnAddStudents.UseVisualStyleBackColor = false;
+            this.btnAddStudents.Click += new System.EventHandler(this.btnAddStudents_Click);
+            // 
             // frmMainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -438,5 +455,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AcademicYear;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
+        private System.Windows.Forms.Button btnAddStudents;
     }
 }

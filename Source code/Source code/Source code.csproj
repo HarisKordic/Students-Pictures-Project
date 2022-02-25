@@ -72,6 +72,12 @@
     <Compile Include="Entitites\Student.cs" />
     <Compile Include="Entitites\StudentPicture.cs" />
     <Compile Include="Entitites\Subject.cs" />
+    <Compile Include="Forms\frmAddNewStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddNewStudent.Designer.cs">
+      <DependentUpon>frmAddNewStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmEditOrDeletePicture.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\frmAddNewStudent.resx">
+      <DependentUpon>frmAddNewStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmEditOrDeletePicture.resx">
       <DependentUpon>frmEditOrDeletePicture.cs</DependentUpon>
     </EmbeddedResource>
