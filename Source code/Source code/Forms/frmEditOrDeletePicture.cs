@@ -95,8 +95,13 @@ namespace Source_code.Forms
             Student.Pictures[Counter].Date = dtpDate.Value;
         private void txtBoxDescritpion_TextChanged(object sender, EventArgs e) =>
             Student.Pictures[Counter].Description = txtBoxDescritpion.Text;
-        private void pbPicture_LoadCompleted(object sender, AsyncCompletedEventArgs e) =>
+        private void pbPicture_Click(object sender, EventArgs e)
+        {
+            if (ofdFindPicture.ShowDialog() == DialogResult.OK)
+                pbPicture.Image = Image.FromFile(ofdFindPicture.FileName);//Insert desired picture;
+            //Save newly added picture:
             Student.Pictures[Counter].Picture = Helpers.ImageConverter.ImageToByte(pbPicture.Image);
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             _db.Entry(Student.Pictures[Counter]).State=System.Data.Entity.EntityState.Modified;
@@ -112,8 +117,9 @@ namespace Source_code.Forms
             txtBoxDescritpion.Text = Student.Pictures[Counter].Description;
             dtpDate.Value = Student.Pictures[Counter].Date;
         }
+
         #endregion
 
-
+      
     }
 }

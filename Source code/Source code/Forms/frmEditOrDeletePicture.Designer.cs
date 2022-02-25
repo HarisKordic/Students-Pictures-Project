@@ -40,6 +40,7 @@
             this.lblDescritpion = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
+            this.ofdFindPicture = new System.Windows.Forms.OpenFileDialog();
             this.grpBoxStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPicture)).BeginInit();
             this.SuspendLayout();
@@ -143,7 +144,7 @@
             this.pbPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPicture.TabIndex = 8;
             this.pbPicture.TabStop = false;
-            this.pbPicture.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.pbPicture_LoadCompleted);
+            this.pbPicture.Click += new System.EventHandler(this.pbPicture_Click);
             // 
             // lblPicture
             // 
@@ -191,6 +192,10 @@
             this.lblInfo.Text = "Move through student\'s pictures via \'Previous\' and \'Next\' buttons,  edit the info" +
     "rmation,and save with the click of the Save button.\r\n";
             // 
+            // ofdFindPicture
+            // 
+            this.ofdFindPicture.FileName = "openFileDialog1";
+            // 
             // frmEditOrDeletePicture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -223,5 +228,6 @@
         private System.Windows.Forms.Label lblDescritpion;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.OpenFileDialog ofdFindPicture;
     }
 }
