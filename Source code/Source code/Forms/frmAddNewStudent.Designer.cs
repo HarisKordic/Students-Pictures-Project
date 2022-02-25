@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.grpBoxStudents = new System.Windows.Forms.GroupBox();
             this.txtBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.lblPhone = new System.Windows.Forms.Label();
@@ -44,7 +45,9 @@
             this.btnSaveStudent = new System.Windows.Forms.Button();
             this.txtBoxName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
             this.grpBoxStudents.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
             // grpBoxStudents
@@ -223,6 +226,10 @@
             this.lblName.TabIndex = 3;
             this.lblName.Text = "Name: ";
             // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            // 
             // frmAddNewStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -236,6 +243,7 @@
             this.Text = "Add new student";
             this.grpBoxStudents.ResumeLayout(false);
             this.grpBoxStudents.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -258,5 +266,6 @@
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.TextBox txtBoxAcademicYear;
         private System.Windows.Forms.Label lblAcademicYear;
+        private System.Windows.Forms.ErrorProvider error;
     }
 }

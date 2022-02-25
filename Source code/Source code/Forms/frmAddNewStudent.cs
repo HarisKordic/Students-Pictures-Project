@@ -42,8 +42,19 @@ namespace Source_code.Forms
         #region Adding new student
         private void btnSaveStudent_Click(object sender, EventArgs e)
         {
+            if (ValidateControls())
+            {
 
+            }
         }
+
+        private bool ValidateControls() => Helpers.Validator.ValidateControl(txtBoxName, error,
+            "Required field!") && Helpers.Validator.ValidateControl(txtBoxSurname, error,
+            "Required field!") && Helpers.Validator.ValidateControl(txtBoxAcademicYear, error,
+            "Required field!") && Helpers.Validator.ValidateControl(txtBoxPhoneNumber, error,
+            "Required field!") && Helpers.Validator.ValidateControl(cmbSemester, error,
+            "Required field!") && Helpers.Validator.ValidateControl(cmbGender, error,
+            "Required field!");
         #endregion
     }
 }
