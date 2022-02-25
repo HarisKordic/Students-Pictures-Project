@@ -191,6 +191,7 @@ namespace Source_code.Forms
         {
             this.Hide();
             new frmAddNewStudent().ShowDialog();
+            LoadAllStudents(_db.Students.ToList());//Refresh dgv;
             this.Show();
         }
         #endregion

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Source_code.DataBase;
+using Source_code.Entitites;
 
 namespace Source_code.Forms
 {
@@ -19,7 +20,9 @@ namespace Source_code.Forms
         {
             InitializeComponent();
             LoadAvaliableGenders();
+            LoadAvaliableSemesters();
         }
+        #endregion
 
         #region Loading Genders
         private void LoadAvaliableGenders()
@@ -37,6 +40,9 @@ namespace Source_code.Forms
         }
         #endregion
 
+        #region Loading Semesters
+        private void LoadAvaliableSemesters()=> cmbSemester.DataSource = 
+            new List<int> { 1, 2, 3, 4, 5, 6 };
         #endregion
 
         #region Adding new student
@@ -44,7 +50,22 @@ namespace Source_code.Forms
         {
             if (ValidateControls())
             {
-
+                var student = new Student()
+                {
+                    Name = txtBoxName.Text,
+                    Surname = txtBoxSurname.Text,
+                    PhoneNumber = txtBoxPhoneNumber.Text,
+                    BirthDay = dtpBirthday.Value,
+                    Gender = cmbGender.SelectedItem as Gender,
+                    AcademicYear = txtBoxAcademicYear.Text,
+                    Semester = int.Parse(cmbSemester.SelectedItem.ToString())
+                };
+                _db.Students.Add(student);//Add new student;
+                _db.SaveChanges();
+                MessageBox.Show($"Student {student} was successfully added!",
+                    "Successful operation", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                this.Close();
             }
         }
 

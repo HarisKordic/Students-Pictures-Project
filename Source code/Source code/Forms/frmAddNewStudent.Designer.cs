@@ -73,7 +73,7 @@
             this.grpBoxStudents.Location = new System.Drawing.Point(12, 12);
             this.grpBoxStudents.Name = "grpBoxStudents";
             this.grpBoxStudents.Size = new System.Drawing.Size(385, 276);
-            this.grpBoxStudents.TabIndex = 2;
+            this.grpBoxStudents.TabIndex = 0;
             this.grpBoxStudents.TabStop = false;
             this.grpBoxStudents.Text = "Add a student:";
             // 
@@ -84,7 +84,7 @@
             this.txtBoxPhoneNumber.Multiline = true;
             this.txtBoxPhoneNumber.Name = "txtBoxPhoneNumber";
             this.txtBoxPhoneNumber.Size = new System.Drawing.Size(223, 19);
-            this.txtBoxPhoneNumber.TabIndex = 19;
+            this.txtBoxPhoneNumber.TabIndex = 6;
             // 
             // lblPhone
             // 
@@ -102,7 +102,7 @@
             this.txtBoxAcademicYear.Multiline = true;
             this.txtBoxAcademicYear.Name = "txtBoxAcademicYear";
             this.txtBoxAcademicYear.Size = new System.Drawing.Size(223, 19);
-            this.txtBoxAcademicYear.TabIndex = 17;
+            this.txtBoxAcademicYear.TabIndex = 5;
             // 
             // lblAcademicYear
             // 
@@ -121,7 +121,7 @@
             this.cmbGender.Location = new System.Drawing.Point(105, 155);
             this.cmbGender.Name = "cmbGender";
             this.cmbGender.Size = new System.Drawing.Size(90, 21);
-            this.cmbGender.TabIndex = 15;
+            this.cmbGender.TabIndex = 4;
             // 
             // lblGender
             // 
@@ -138,7 +138,7 @@
             this.dtpBirthday.Location = new System.Drawing.Point(105, 126);
             this.dtpBirthday.Name = "dtpBirthday";
             this.dtpBirthday.Size = new System.Drawing.Size(259, 21);
-            this.dtpBirthday.TabIndex = 13;
+            this.dtpBirthday.TabIndex = 3;
             // 
             // lblBirthDay
             // 
@@ -154,17 +154,10 @@
             this.cmbSemester.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSemester.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.cmbSemester.FormattingEnabled = true;
-            this.cmbSemester.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
             this.cmbSemester.Location = new System.Drawing.Point(105, 99);
             this.cmbSemester.Name = "cmbSemester";
             this.cmbSemester.Size = new System.Drawing.Size(90, 21);
-            this.cmbSemester.TabIndex = 11;
+            this.cmbSemester.TabIndex = 2;
             // 
             // lblSemester
             // 
@@ -182,7 +175,7 @@
             this.txtBoxSurname.Multiline = true;
             this.txtBoxSurname.Name = "txtBoxSurname";
             this.txtBoxSurname.Size = new System.Drawing.Size(259, 19);
-            this.txtBoxSurname.TabIndex = 9;
+            this.txtBoxSurname.TabIndex = 1;
             // 
             // lblSurname
             // 
@@ -215,7 +208,7 @@
             this.txtBoxName.Multiline = true;
             this.txtBoxName.Name = "txtBoxName";
             this.txtBoxName.Size = new System.Drawing.Size(259, 19);
-            this.txtBoxName.TabIndex = 4;
+            this.txtBoxName.TabIndex = 0;
             // 
             // lblName
             // 
@@ -223,7 +216,7 @@
             this.lblName.Location = new System.Drawing.Point(18, 50);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(59, 20);
-            this.lblName.TabIndex = 3;
+            this.lblName.TabIndex = 9;
             this.lblName.Text = "Name: ";
             // 
             // error
@@ -240,7 +233,7 @@
             this.MaximizeBox = false;
             this.Name = "frmAddNewStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add new student";
+            this.Text = "0";
             this.grpBoxStudents.ResumeLayout(false);
             this.grpBoxStudents.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
