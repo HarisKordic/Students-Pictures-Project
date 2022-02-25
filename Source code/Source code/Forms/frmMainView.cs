@@ -140,42 +140,10 @@ namespace Source_code.Forms
                     }
                     else//Button for pictures;
                     {
-                        LoadPicturesToStudents();
                         var studentSubject = dgv.Rows[e.RowIndex].DataBoundItem as StudentPassedSubject;
                         this.Hide();
                         new frmStudentPicture(studentSubject?.Student).ShowDialog();
                         this.Show();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"{ex.Message + Environment.NewLine}{ex.InnerException?.Message}");
-            }
-        }
-        #endregion
-
-        #region Loading pictures for each student
-        private void LoadPicturesToStudents()
-        {
-            try
-            {
-                foreach (var student in _db.Students)
-                {
-                    foreach (var picture in _db.StudentsPictures)
-                    {
-                        if (student.Id == picture.Student.Id)//Coresponding student;
-                        {
-                            var addPic = new StudentPicture()
-                            {
-                                Id = picture.Id,
-                                Student = picture.Student,
-                                Picture = picture.Picture,
-                                Description = picture.Description,
-                                Date = picture.Date
-                            };
-                            student.Pictures.Add(addPic);
-                        }
                     }
                 }
             }
@@ -192,6 +160,16 @@ namespace Source_code.Forms
             this.Hide();
             new frmAddNewStudent().ShowDialog();
             LoadAllStudents(_db.Students.ToList());//Refresh dgv;
+            this.Show();
+        }
+        #endregion
+
+        #region Adding new subject to students
+        private void btnAddSubjectToStudent_Click(object sender, EventArgs e)
+        {
+            this.Close();
+           // new frmAddSubjectToStudent().ShowDialog();
+            LoadStudentsSubjects(_db.StudentsPassedSubjects.ToList());
             this.Show();
         }
         #endregion
