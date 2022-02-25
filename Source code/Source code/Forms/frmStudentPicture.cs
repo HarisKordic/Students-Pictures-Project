@@ -165,6 +165,8 @@ namespace Source_code.Forms
             this.Hide();
             new frmEditOrDeletePicture(this.Student).ShowDialog();
             //Loading newly addes content:
+            lblCurrentPicture.Text = $"Showing picture {Counter + 1} out of {Student.Pictures.Count}";
+            Counter = 0;//Reset counter;
             DisplayPicture.Image = Helpers.ImageConverter.ByteToImage(Student.Pictures[0].Picture);
             lblDateOfPicture.Text = $"Date: {Student.Pictures[0].Date.ToString("dd MM yyyy")}";
             lblDescription.Text = Student.Pictures[0].Description;
