@@ -195,11 +195,11 @@
             this.btnSaveStudent.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSaveStudent.FlatAppearance.BorderSize = 100;
             this.btnSaveStudent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSaveStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnSaveStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnSaveStudent.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSaveStudent.Location = new System.Drawing.Point(271, 231);
+            this.btnSaveStudent.Location = new System.Drawing.Point(300, 231);
             this.btnSaveStudent.Name = "btnSaveStudent";
-            this.btnSaveStudent.Size = new System.Drawing.Size(93, 30);
+            this.btnSaveStudent.Size = new System.Drawing.Size(64, 30);
             this.btnSaveStudent.TabIndex = 7;
             this.btnSaveStudent.Text = "Save ";
             this.btnSaveStudent.UseVisualStyleBackColor = false;
