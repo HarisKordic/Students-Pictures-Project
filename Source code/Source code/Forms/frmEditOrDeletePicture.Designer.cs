@@ -74,6 +74,7 @@
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(175, 23);
             this.dtpDate.TabIndex = 12;
+            this.dtpDate.ValueChanged += new System.EventHandler(this.dtpDate_ValueChanged);
             // 
             // btnDelete
             // 
@@ -102,6 +103,7 @@
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnNext
             // 
@@ -141,6 +143,7 @@
             this.pbPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbPicture.TabIndex = 8;
             this.pbPicture.TabStop = false;
+            this.pbPicture.LoadCompleted += new System.ComponentModel.AsyncCompletedEventHandler(this.pbPicture_LoadCompleted);
             // 
             // lblPicture
             // 
@@ -158,6 +161,7 @@
             this.txtBoxDescritpion.Name = "txtBoxDescritpion";
             this.txtBoxDescritpion.Size = new System.Drawing.Size(551, 218);
             this.txtBoxDescritpion.TabIndex = 6;
+            this.txtBoxDescritpion.TextChanged += new System.EventHandler(this.txtBoxDescritpion_TextChanged);
             // 
             // lblDescritpion
             // 

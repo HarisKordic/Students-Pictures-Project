@@ -104,7 +104,7 @@ namespace Source_code.Forms
             {
                 lblCurrentPicture.Text = $"Showing picture {Counter+1} out of {Student.Pictures.Count}";
                 DisplayPicture.Image=Helpers.ImageConverter.ByteToImage(Student.Pictures[0].Picture);
-                lblDateOfPicture.Text = $"Date:{Student.Pictures[0].Date}";
+                lblDateOfPicture.Text = $"Date:{Student.Pictures[0].Date.ToString("dd MM yyyy")}";
                 lblDescription.Text = Student.Pictures[0].Description;
             }
             else
@@ -128,7 +128,7 @@ namespace Source_code.Forms
                     [Counter].Picture);
                 lblCurrentPicture.Text = $"Showing picture {Counter + 1} out of {Student.Pictures.Count}";
                 lblDescription.Text = Student.Pictures[Counter].Description;
-                lblDateOfPicture.Text = $"Date: {Student.Pictures[Counter].Date}";
+                lblDateOfPicture.Text = $"Date: {Student.Pictures[Counter].Date.ToString("dd MM yyyy")}";
             }
             else
             {
@@ -147,7 +147,7 @@ namespace Source_code.Forms
                     [Counter].Picture);
                 lblCurrentPicture.Text = $"Showing picture {Counter + 1} out of {Student.Pictures.Count}";
                 lblDescription.Text = Student.Pictures[Counter].Description;
-                lblDateOfPicture.Text = $"Date: {Student.Pictures[Counter].Date}";
+                lblDateOfPicture.Text = $"Date: {Student.Pictures[Counter].Date.ToString("dd MM yyyy")}";
             }
             else
             {
@@ -164,6 +164,13 @@ namespace Source_code.Forms
         {
             this.Hide();
             new frmEditOrDeletePicture(this.Student).ShowDialog();
+            //Loading newly addes content:
+            _db.SaveChanges();
+            Student.Pictures = _db.StudentsPictures.Where(p =>
+                p.Student.Id == this.Student.Id).ToList();
+            DisplayPicture.Image = Helpers.ImageConverter.ByteToImage(Student.Pictures[0].Picture);
+            lblDateOfPicture.Text = $"Date:{Student.Pictures[0].Date.ToString("dd MM yyyy")}";
+            lblDescription.Text = Student.Pictures[0].Description;
             this.Show();
         }
         #endregion

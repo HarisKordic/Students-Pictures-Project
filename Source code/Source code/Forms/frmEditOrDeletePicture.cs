@@ -89,5 +89,31 @@ namespace Source_code.Forms
             }
         }
         #endregion
+
+        #region Editing selected picture
+        private void dtpDate_ValueChanged(object sender, EventArgs e) => 
+            Student.Pictures[Counter].Date = dtpDate.Value;
+        private void txtBoxDescritpion_TextChanged(object sender, EventArgs e) =>
+            Student.Pictures[Counter].Description = txtBoxDescritpion.Text;
+        private void pbPicture_LoadCompleted(object sender, AsyncCompletedEventArgs e) =>
+            Student.Pictures[Counter].Picture = Helpers.ImageConverter.ImageToByte(pbPicture.Image);
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            _db.Entry(Student.Pictures[Counter]).State=System.Data.Entity.EntityState.Modified;
+            _db.SaveChanges();
+            MessageBox.Show($"The displayed picture was successfully " +
+                            $"edited for {Student}  student.", "Successful operation",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Student.Pictures=_db.StudentsPictures.
+                Where(p => p.Student.Id == this.Student.Id).ToList();//Loading pics from db;
+            //Refreshing main view to newly edited info:
+            pbPicture.Image = Helpers.ImageConverter.ByteToImage(Student.
+                Pictures[Counter].Picture);
+            txtBoxDescritpion.Text = Student.Pictures[Counter].Description;
+            dtpDate.Value = Student.Pictures[Counter].Date;
+        }
+        #endregion
+
+
     }
 }

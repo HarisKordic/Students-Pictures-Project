@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.grpBoxAddNewPicture = new System.Windows.Forms.GroupBox();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.AddPicture = new System.Windows.Forms.PictureBox();
             this.lblAddPic = new System.Windows.Forms.Label();
             this.btnSavePicture = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.lblCurrentPicture = new System.Windows.Forms.Label();
             this.btnRight = new System.Windows.Forms.Button();
             this.lblDateOfPicture = new System.Windows.Forms.Label();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.grpBoxAddNewPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
@@ -66,10 +66,25 @@
             this.grpBoxAddNewPicture.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grpBoxAddNewPicture.Location = new System.Drawing.Point(12, 12);
             this.grpBoxAddNewPicture.Name = "grpBoxAddNewPicture";
-            this.grpBoxAddNewPicture.Size = new System.Drawing.Size(614, 576);
+            this.grpBoxAddNewPicture.Size = new System.Drawing.Size(614, 638);
             this.grpBoxAddNewPicture.TabIndex = 3;
             this.grpBoxAddNewPicture.TabStop = false;
             this.grpBoxAddNewPicture.Text = "Add new picture to student:";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEdit.FlatAppearance.BorderSize = 100;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEdit.Location = new System.Drawing.Point(10, 602);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(93, 30);
+            this.btnEdit.TabIndex = 11;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // AddPicture
             // 
@@ -97,7 +112,7 @@
             this.btnSavePicture.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSavePicture.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnSavePicture.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSavePicture.Location = new System.Drawing.Point(515, 539);
+            this.btnSavePicture.Location = new System.Drawing.Point(498, 602);
             this.btnSavePicture.Name = "btnSavePicture";
             this.btnSavePicture.Size = new System.Drawing.Size(93, 30);
             this.btnSavePicture.TabIndex = 8;
@@ -144,7 +159,7 @@
             this.grpBoxDisplayPics.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grpBoxDisplayPics.Location = new System.Drawing.Point(645, 12);
             this.grpBoxDisplayPics.Name = "grpBoxDisplayPics";
-            this.grpBoxDisplayPics.Size = new System.Drawing.Size(929, 576);
+            this.grpBoxDisplayPics.Size = new System.Drawing.Size(929, 638);
             this.grpBoxDisplayPics.TabIndex = 11;
             this.grpBoxDisplayPics.TabStop = false;
             this.grpBoxDisplayPics.Text = "Student\'s avaliable pictures:";
@@ -161,7 +176,7 @@
             // 
             this.lblDescription.Location = new System.Drawing.Point(6, 456);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(900, 113);
+            this.lblDescription.Size = new System.Drawing.Size(900, 176);
             this.lblDescription.TabIndex = 11;
             // 
             // btnLeft
@@ -220,26 +235,11 @@
             this.lblDateOfPicture.TabIndex = 4;
             this.lblDateOfPicture.Text = "Date:";
             // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnEdit.FlatAppearance.BorderSize = 100;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnEdit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnEdit.Location = new System.Drawing.Point(10, 539);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(93, 30);
-            this.btnEdit.TabIndex = 11;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
             // frmStudentPicture
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1586, 600);
+            this.ClientSize = new System.Drawing.Size(1586, 662);
             this.Controls.Add(this.grpBoxDisplayPics);
             this.Controls.Add(this.grpBoxAddNewPicture);
             this.IsMdiContainer = true;
