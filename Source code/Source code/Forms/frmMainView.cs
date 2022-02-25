@@ -168,7 +168,7 @@ namespace Source_code.Forms
         private void btnAddSubjectToStudent_Click(object sender, EventArgs e)
         {
             this.Close();
-           // new frmAddSubjectToStudent().ShowDialog();
+            new frmAddSubjectToStudent().ShowDialog();
             LoadStudentsSubjects(_db.StudentsPassedSubjects.ToList());
             this.Show();
         }
