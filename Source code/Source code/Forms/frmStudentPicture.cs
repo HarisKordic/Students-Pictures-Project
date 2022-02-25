@@ -165,11 +165,8 @@ namespace Source_code.Forms
             this.Hide();
             new frmEditOrDeletePicture(this.Student).ShowDialog();
             //Loading newly addes content:
-            _db.SaveChanges();
-            Student.Pictures = _db.StudentsPictures.Where(p =>
-                p.Student.Id == this.Student.Id).ToList();
             DisplayPicture.Image = Helpers.ImageConverter.ByteToImage(Student.Pictures[0].Picture);
-            lblDateOfPicture.Text = $"Date:{Student.Pictures[0].Date.ToString("dd MM yyyy")}";
+            lblDateOfPicture.Text = $"Date: {Student.Pictures[0].Date.ToString("dd MM yyyy")}";
             lblDescription.Text = Student.Pictures[0].Description;
             this.Show();
         }
