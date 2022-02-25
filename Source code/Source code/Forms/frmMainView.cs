@@ -167,7 +167,7 @@ namespace Source_code.Forms
         #region Adding new subject to students
         private void btnAddSubjectToStudent_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             new frmAddSubjectToStudent().ShowDialog();
             LoadStudentsSubjects(_db.StudentsPassedSubjects.ToList());
             this.Show();

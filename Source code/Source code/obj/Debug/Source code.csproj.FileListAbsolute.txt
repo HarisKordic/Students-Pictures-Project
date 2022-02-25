@@ -23,3 +23,4 @@ C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debu
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source_code.Forms.frmStudentPicture.resources
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source_code.Forms.frmEditOrDeletePicture.resources
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source_code.Forms.frmAddNewStudent.resources
+C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source_code.Forms.frmAddSubjectToStudent.resources
