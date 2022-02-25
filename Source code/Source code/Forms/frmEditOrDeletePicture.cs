@@ -102,7 +102,7 @@ namespace Source_code.Forms
             _db.Entry(Student.Pictures[Counter]).State=System.Data.Entity.EntityState.Modified;
             _db.SaveChanges();
             MessageBox.Show($"The displayed picture was successfully " +
-                            $"edited for {Student}  student.", "Successful operation",
+                            $"edited for {Student}.", "Successful operation",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
             Student.Pictures=_db.StudentsPictures.
                 Where(p => p.Student.Id == this.Student.Id).ToList();//Loading pics from db;
