@@ -161,7 +161,7 @@
             this.txtBoxDescritpion.Multiline = true;
             this.txtBoxDescritpion.Name = "txtBoxDescritpion";
             this.txtBoxDescritpion.Size = new System.Drawing.Size(551, 218);
-            this.txtBoxDescritpion.TabIndex = 6;
+            this.txtBoxDescritpion.TabIndex = 8;
             this.txtBoxDescritpion.TextChanged += new System.EventHandler(this.txtBoxDescritpion_TextChanged);
             // 
             // lblDescritpion
@@ -205,7 +205,7 @@
             this.IsMdiContainer = true;
             this.Name = "frmEditOrDeletePicture";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Edit student\'s pictures";
+            this.Text = "1";
             this.Load += new System.EventHandler(this.frmEditOrDeletePicture_Load);
             this.grpBoxStudents.ResumeLayout(false);
             this.grpBoxStudents.PerformLayout();
