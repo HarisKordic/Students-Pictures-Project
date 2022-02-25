@@ -119,7 +119,5 @@ namespace Source_code.Forms
         }
 
         #endregion
-
-      
     }
 }
