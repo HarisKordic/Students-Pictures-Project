@@ -399,11 +399,11 @@
             // 
             // Date
             // 
-            this.Date.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Date.DataPropertyName = "Date";
+            this.Date.DataPropertyName = "DateToShow";
             this.Date.HeaderText = "Date";
             this.Date.Name = "Date";
             this.Date.ReadOnly = true;
+            this.Date.Width = 318;
             // 
             // DeleteSubject
             // 
@@ -458,12 +458,6 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.Button btnSaveStudentToFile;
         private System.Windows.Forms.Button btnSaveStudentsSubjectsToFile;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Student;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewButtonColumn DeleteSubject;
-        private System.Windows.Forms.DataGridViewButtonColumn ShowPictures;
         private System.Windows.Forms.DataGridViewTextBoxColumn Namee;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Index;
@@ -475,5 +469,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
         private System.Windows.Forms.Button btnAddStudents;
         private System.Windows.Forms.Button btnAddSubjectToStudent;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Student;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewButtonColumn DeleteSubject;
+        private System.Windows.Forms.DataGridViewButtonColumn ShowPictures;
     }
 }
