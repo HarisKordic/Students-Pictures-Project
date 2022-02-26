@@ -61,7 +61,31 @@ namespace Source_code.Forms
         #region Adding a subject to a student
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            var subjectToAdd=cmbSubjects.SelectedItem as Subject;
+            var studentToAdd=cmbStudents.SelectedItem as Student;
 
+            //Only if the student did not already pass the subject, add it;
+            if (!_db.StudentsPassedSubjects.ToList().Exists(
+                    sS => sS.Student == studentToAdd && sS.Subject == subjectToAdd))
+            {
+                var newStudentSubject = new StudentPassedSubject()
+                {
+                    Student = studentToAdd,
+                    Subject = subjectToAdd,
+                    Date = dtpDate.Value,
+                    Grade = int.Parse(cmbGrade.SelectedItem.ToString())
+                };
+                _db.StudentsPassedSubjects.Add(newStudentSubject);
+                _db.SaveChanges();
+                MessageBox.Show($"You successfully added subject: {subjectToAdd}" +
+                                $" to student {studentToAdd}", "Successful operation",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else
+                MessageBox.Show($"{studentToAdd} has already passed {subjectToAdd}! You cannot add" +
+                                $" subjects that the student has already passed.",
+                    "Invalid operation", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         #endregion
     }
