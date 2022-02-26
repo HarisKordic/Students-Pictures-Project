@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="DataBase\ConnectionToDb.cs" />
     <Compile Include="DataBase\Db.cs" />
+    <Compile Include="Entitites\Extension.cs" />
     <Compile Include="Entitites\Gender.cs" />
     <Compile Include="Entitites\StudentPassedSubject.cs" />
     <Compile Include="Entitites\Student.cs" />

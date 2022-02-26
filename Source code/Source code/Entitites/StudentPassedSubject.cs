@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Source_code.Entitites
 {
-    [Table ("StudentsPassedSubjects")]
-    public  class StudentPassedSubject
+    [Table("StudentsPassedSubjects")]
+    public class StudentPassedSubject
     {
         #region Props
 
@@ -17,6 +13,7 @@ namespace Source_code.Entitites
         public virtual Subject Subject { get; set; }
         public int Grade { get; set; }
         public DateTime Date { get; set; }
+        [NotMapped] public string DateToShow => Date.ShowDate();//Just to show date in correct format in dgv;
         #endregion  
         public override string ToString()
         {

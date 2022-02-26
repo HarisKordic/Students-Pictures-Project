@@ -32,15 +32,19 @@ namespace Source_code.Entitites
                                      " year." + " Email: " + Email + ", Phone number: " + PhoneNumber
                                      + ", gender: " + Gender;//So we can have a string of information when we save a student to a file;
         [NotMapped] public List<StudentPicture> Pictures { get; set; }
+
+        public override string ToString() => Name + " " + Surname;
         #endregion
 
+        #region Default constructor
         public Student()
         {
-            Index = $"IN{(BirthDay.Year*100000)+new Random().Next(100,201)}";
-            PhoneNumber=GeneratePhoneNumber();
+            Index = $"IN{(BirthDay.Year * 100000) + new Random().Next(100, 201)}";
+            PhoneNumber = GeneratePhoneNumber();
             Pictures = new List<StudentPicture>();//So we don't get a null ref. exception;
         }
-        public override string ToString() => Name + " " + Surname;
+        #endregion
+  
         #region Phone num generator
 
         private string GeneratePhoneNumber()
@@ -58,13 +62,5 @@ namespace Source_code.Entitites
         }
         #endregion
     }
-    #region Extension class
-    internal static class Extension
-    {
-        public static string ShowDate(this DateTime dateTime)
-        {
-            return dateTime.ToString("dd mm yyyy");
-        }
-    }
-    #endregion
+   
 }
