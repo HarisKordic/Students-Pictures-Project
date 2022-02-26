@@ -194,7 +194,7 @@
             this.btnSaveStudent.Name = "btnSaveStudent";
             this.btnSaveStudent.Size = new System.Drawing.Size(64, 30);
             this.btnSaveStudent.TabIndex = 7;
-            this.btnSaveStudent.Text = "Save ";
+            this.btnSaveStudent.Text = "Edit";
             this.btnSaveStudent.UseVisualStyleBackColor = false;
             // 
             // txtBoxName

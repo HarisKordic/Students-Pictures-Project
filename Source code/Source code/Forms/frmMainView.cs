@@ -177,8 +177,10 @@ namespace Source_code.Forms
         #region Editing a student
         private void dgvStudents_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            var dgv = sender as DataGridView;
+            var student=dgv?.Rows[e.RowIndex].DataBoundItem as Student;//Selected student;
             this.Hide();
-            new frmEditStudent().ShowDialog();
+            new frmEditStudent(student).ShowDialog();
             //Refresh data from db:
             LoadAllStudents(_db.Students.ToList());
             this.Show();
