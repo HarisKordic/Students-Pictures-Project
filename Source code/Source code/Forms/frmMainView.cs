@@ -152,6 +152,7 @@ namespace Source_code.Forms
                     var studentSubject = dgv?.Rows[e.RowIndex].DataBoundItem as StudentPassedSubject;
                     this.Hide();
                     new frmEditSubjectForStudent(studentSubject).ShowDialog();
+                    LoadStudentsSubjects(_db.StudentsPassedSubjects.ToList());//Refresh grid;
                     this.Show();
                 }
                 #endregion
