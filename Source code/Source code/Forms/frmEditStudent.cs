@@ -16,9 +16,9 @@ namespace Source_code.Forms
         {
             InitializeComponent();
             this.Student = student;
-            LoadInfo();
             cmbSemester.DataSource = new List<int>() { 1, 2, 3, 4, 5, 6 };
             LoadAvaliableGenders();
+            LoadInfo();
         }
         #endregion
 
@@ -52,9 +52,18 @@ namespace Source_code.Forms
         #endregion
 
         #region Editing student information
-        private void btnSaveStudent_Click(object sender, EventArgs e)
+        private void btnEditStudent_Click(object sender, EventArgs e)
         {
-
+            this.Student.Name = txtBoxName.Text;
+            this.Student.Surname= txtBoxSurname.Text;
+            this.Student.BirthDay = dtpBirthday.Value;
+            this.Student.AcademicYear = txtBoxAcademicYear.Text;
+            this.Student.PhoneNumber= txtBoxPhoneNumber.Text;
+            this.Student.Semester = int.Parse(cmbSemester.SelectedItem.ToString());
+            this.Student.Gender=cmbGender.SelectedItem as Gender;
+            MessageBox.Show($"{Student} was successfully edited.", "Successful operation",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
         #endregion
     }

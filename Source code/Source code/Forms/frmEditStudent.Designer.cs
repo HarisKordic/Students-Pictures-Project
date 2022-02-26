@@ -196,7 +196,7 @@
             this.btnSaveStudent.TabIndex = 7;
             this.btnSaveStudent.Text = "Edit";
             this.btnSaveStudent.UseVisualStyleBackColor = false;
-            this.btnSaveStudent.Click += new System.EventHandler(this.btnSaveStudent_Click);
+            this.btnSaveStudent.Click += new System.EventHandler(this.btnEditStudent_Click);
             // 
             // txtBoxName
             // 
