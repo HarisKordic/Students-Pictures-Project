@@ -205,7 +205,7 @@
             this.IsMdiContainer = true;
             this.Name = "frmEditOrDeletePicture";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "1";
+            this.Text = "Edit students pictures";
             this.Load += new System.EventHandler(this.frmEditOrDeletePicture_Load);
             this.grpBoxStudents.ResumeLayout(false);
             this.grpBoxStudents.PerformLayout();
