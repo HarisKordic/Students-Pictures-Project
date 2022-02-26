@@ -84,6 +84,12 @@
     <Compile Include="Forms\frmAddSubjectToStudent.Designer.cs">
       <DependentUpon>frmAddSubjectToStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmEditSubjectForStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEditSubjectForStudent.Designer.cs">
+      <DependentUpon>frmEditSubjectForStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmEditOrDeletePicture.cs">
       <SubType>Form</SubType>
     </Compile>

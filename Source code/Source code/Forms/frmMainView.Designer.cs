@@ -372,7 +372,7 @@
             this.dgvStudentsSubjects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvStudentsSubjects.Size = new System.Drawing.Size(1729, 266);
             this.dgvStudentsSubjects.TabIndex = 1;
-            this.dgvStudentsSubjects.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentsSubjects_CellContentClick);
+            this.dgvStudentsSubjects.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentsSubjects_CellClick);
             // 
             // Student
             // 

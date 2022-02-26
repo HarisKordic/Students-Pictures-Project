@@ -111,8 +111,8 @@ namespace Source_code.Forms
         }
         #endregion
 
-        #region Deleteing a subject or looking up student's pictures:
-        private void dgvStudentsSubjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        #region Deleteing a subject or looking up student's pictures
+        private void dgvStudentsSubjects_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -146,6 +146,15 @@ namespace Source_code.Forms
                         this.Show();
                     }
                 }
+                #region Editing a subject for a student
+                else//Editing triggered
+                {
+                    var studentSubject = dgv?.Rows[e.RowIndex].DataBoundItem as StudentPassedSubject;
+                    this.Hide();
+                    new frmEditSubjectForStudent(studentSubject).ShowDialog();
+                    this.Show();
+                }
+                #endregion
             }
             catch (Exception ex)
             {
