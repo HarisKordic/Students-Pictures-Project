@@ -71,7 +71,7 @@
             this.cmbGrade.FormattingEnabled = true;
             this.cmbGrade.Location = new System.Drawing.Point(86, 144);
             this.cmbGrade.Name = "cmbGrade";
-            this.cmbGrade.Size = new System.Drawing.Size(121, 21);
+            this.cmbGrade.Size = new System.Drawing.Size(179, 21);
             this.cmbGrade.TabIndex = 16;
             // 
             // dtpDate
@@ -79,7 +79,7 @@
             this.dtpDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.dtpDate.Location = new System.Drawing.Point(86, 119);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(121, 21);
+            this.dtpDate.Size = new System.Drawing.Size(179, 21);
             this.dtpDate.TabIndex = 15;
             // 
             // cmbSubjects
@@ -89,7 +89,7 @@
             this.cmbSubjects.FormattingEnabled = true;
             this.cmbSubjects.Location = new System.Drawing.Point(86, 90);
             this.cmbSubjects.Name = "cmbSubjects";
-            this.cmbSubjects.Size = new System.Drawing.Size(121, 21);
+            this.cmbSubjects.Size = new System.Drawing.Size(179, 21);
             this.cmbSubjects.TabIndex = 14;
             // 
             // cmbStudents
@@ -99,7 +99,7 @@
             this.cmbStudents.FormattingEnabled = true;
             this.cmbStudents.Location = new System.Drawing.Point(86, 60);
             this.cmbStudents.Name = "cmbStudents";
-            this.cmbStudents.Size = new System.Drawing.Size(121, 21);
+            this.cmbStudents.Size = new System.Drawing.Size(179, 21);
             this.cmbStudents.TabIndex = 13;
             // 
             // lblSubject

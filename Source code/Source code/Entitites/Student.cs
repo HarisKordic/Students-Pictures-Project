@@ -22,6 +22,7 @@ namespace Source_code.Entitites
         public int Semester { get; set; }
         public string AcademicYear { get; set; }
         public string PhoneNumber { get; set; }
+        [NotMapped] public string NameSurname => Name + " " + Surname;
         public string Email => Name + "." + Surname + "@domain.com";
         [NotMapped] public string DateToShow => BirthDay.ShowDate();//So we can get the date in the DGV in the correct format;
 
