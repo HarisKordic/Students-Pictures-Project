@@ -35,7 +35,7 @@
             this.cmbStudents = new System.Windows.Forms.ComboBox();
             this.lblSubject = new System.Windows.Forms.Label();
             this.lblStudent = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.lblGrade = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             this.grpBoxStudents.Controls.Add(this.cmbStudents);
             this.grpBoxStudents.Controls.Add(this.lblSubject);
             this.grpBoxStudents.Controls.Add(this.lblStudent);
-            this.grpBoxStudents.Controls.Add(this.btnAdd);
+            this.grpBoxStudents.Controls.Add(this.btnEdit);
             this.grpBoxStudents.Controls.Add(this.lblGrade);
             this.grpBoxStudents.Controls.Add(this.lblDate);
             this.grpBoxStudents.Controls.Add(this.lblInfo);
@@ -62,7 +62,7 @@
             this.grpBoxStudents.Size = new System.Drawing.Size(314, 216);
             this.grpBoxStudents.TabIndex = 4;
             this.grpBoxStudents.TabStop = false;
-            this.grpBoxStudents.Text = "Add";
+            this.grpBoxStudents.Text = "Edit";
             // 
             // cmbGrade
             // 
@@ -120,20 +120,20 @@
             this.lblStudent.TabIndex = 11;
             this.lblStudent.Text = "Student:";
             // 
-            // btnAdd
+            // btnEdit
             // 
-            this.btnAdd.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAdd.FlatAppearance.BorderSize = 100;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnAdd.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAdd.Location = new System.Drawing.Point(246, 186);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(63, 24);
-            this.btnAdd.TabIndex = 10;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnEdit.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEdit.FlatAppearance.BorderSize = 100;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEdit.Location = new System.Drawing.Point(246, 186);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(63, 24);
+            this.btnEdit.TabIndex = 10;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // lblGrade
             // 
@@ -188,7 +188,7 @@
         private System.Windows.Forms.ComboBox cmbStudents;
         private System.Windows.Forms.Label lblSubject;
         private System.Windows.Forms.Label lblStudent;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label lblGrade;
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblInfo;

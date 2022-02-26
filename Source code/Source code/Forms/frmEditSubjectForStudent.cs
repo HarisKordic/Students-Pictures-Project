@@ -68,7 +68,7 @@ namespace Source_code.Forms
         #endregion
 
         #region Editing information for passed student
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
             this.Sp.Subject = cmbSubjects.SelectedItem as Subject;
             this.Sp.Grade = int.Parse(cmbGrade.SelectedItem.ToString());
