@@ -57,5 +57,12 @@ namespace Source_code.Forms
             }
         }
         #endregion
+
+        #region Adding a subject to a student
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
     }
 }
