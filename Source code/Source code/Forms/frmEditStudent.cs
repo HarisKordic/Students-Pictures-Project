@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Source_code.DataBase;
+﻿using Source_code.DataBase;
 using Source_code.Entitites;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Source_code.Forms
 {
@@ -16,13 +11,13 @@ namespace Source_code.Forms
     {
         #region Form
         private ConnectionToDb _db = Db.DataBase;
-        private Student  Student;//Passed student;
+        private Student Student;//Passed student;
         public frmEditStudent(Student student)
         {
             InitializeComponent();
             this.Student = student;
             LoadInfo();
-            cmbSemester.DataSource = new List<int>() {1, 2, 3, 4, 5, 6};
+            cmbSemester.DataSource = new List<int>() { 1, 2, 3, 4, 5, 6 };
             LoadAvaliableGenders();
         }
         #endregion
@@ -47,12 +42,19 @@ namespace Source_code.Forms
         private void LoadInfo()
         {
             txtBoxName.Text = this.Student.Name;
-            txtBoxSurname.Text=this.Student.Surname;
-            txtBoxAcademicYear.Text=this.Student.AcademicYear;
-            txtBoxPhoneNumber.Text=this.Student.PhoneNumber;
+            txtBoxSurname.Text = this.Student.Surname;
+            txtBoxAcademicYear.Text = this.Student.AcademicYear;
+            txtBoxPhoneNumber.Text = this.Student.PhoneNumber;
             cmbGender.SelectedItem = this.Student.Gender;
             cmbSemester.SelectedItem = this.Student.Semester;
             dtpBirthday.Value = this.Student.BirthDay;
+        }
+        #endregion
+
+        #region Editing student information
+        private void btnSaveStudent_Click(object sender, EventArgs e)
+        {
+
         }
         #endregion
     }
