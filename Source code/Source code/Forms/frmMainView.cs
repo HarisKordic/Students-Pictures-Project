@@ -173,5 +173,16 @@ namespace Source_code.Forms
             this.Show();
         }
         #endregion
+
+        #region Editing a student
+        private void dgvStudents_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.Hide();
+            new frmEditStudent().ShowDialog();
+            //Refresh data from db:
+            LoadAllStudents(_db.Students.ToList());
+            this.Show();
+        }
+        #endregion
     }
 }

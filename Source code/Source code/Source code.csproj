@@ -90,6 +90,12 @@
     <Compile Include="Forms\frmEditOrDeletePicture.Designer.cs">
       <DependentUpon>frmEditOrDeletePicture.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmEditStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEditStudent.Designer.cs">
+      <DependentUpon>frmEditStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmMainView.cs">
       <SubType>Form</SubType>
     </Compile>
