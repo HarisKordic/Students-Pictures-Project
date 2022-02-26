@@ -61,6 +61,8 @@ namespace Source_code.Forms
             this.Student.PhoneNumber= txtBoxPhoneNumber.Text;
             this.Student.Semester = int.Parse(cmbSemester.SelectedItem.ToString());
             this.Student.Gender=cmbGender.SelectedItem as Gender;
+            _db.Entry(this.Student).State=System.Data.Entity.EntityState.Modified;
+            _db.SaveChanges();
             MessageBox.Show($"{Student} was successfully edited.", "Successful operation",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
