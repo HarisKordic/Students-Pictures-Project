@@ -127,6 +127,9 @@
     <EmbeddedResource Include="Forms\frmEditOrDeletePicture.resx">
       <DependentUpon>frmEditOrDeletePicture.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEditStudent.resx">
+      <DependentUpon>frmEditStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMainView.resx">
       <DependentUpon>frmMainView.cs</DependentUpon>
     </EmbeddedResource>

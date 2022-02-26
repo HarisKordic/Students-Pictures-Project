@@ -233,7 +233,7 @@
             this.MaximizeBox = false;
             this.Name = "frmAddNewStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "0";
+            this.Text = "Add student";
             this.grpBoxStudents.ResumeLayout(false);
             this.grpBoxStudents.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
