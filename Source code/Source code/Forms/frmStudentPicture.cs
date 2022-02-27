@@ -112,8 +112,8 @@ namespace Source_code.Forms
             }
             else
             {
-                MessageBox.Show("Dear user, you got to the end (first picture)," +
-                                "please move forwards.", "Invalid move", MessageBoxButtons.OK,
+                MessageBox.Show("Dear user, you got to the end (last picture)," +
+                                "please move backwards.", "Invalid move", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 Counter--;
             }
@@ -131,8 +131,8 @@ namespace Source_code.Forms
             }
             else
             {
-                MessageBox.Show("Dear user, you got to the end (last picture)," +
-                                "please move backwards.", "Invalid move", MessageBoxButtons.OK,
+                MessageBox.Show("Dear user, you got to the end (first picture)," +
+                                "please move forwards.", "Invalid move", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 Counter = 0;
             }
