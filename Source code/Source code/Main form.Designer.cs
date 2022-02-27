@@ -42,7 +42,7 @@
             this.llblMail.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.llblMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.llblMail.LinkColor = System.Drawing.SystemColors.ButtonFace;
-            this.llblMail.Location = new System.Drawing.Point(350, 329);
+            this.llblMail.Location = new System.Drawing.Point(353, 327);
             this.llblMail.Name = "llblMail";
             this.llblMail.Size = new System.Drawing.Size(74, 20);
             this.llblMail.TabIndex = 2;
