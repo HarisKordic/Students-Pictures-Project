@@ -63,8 +63,9 @@ namespace Source_code.Forms
             this.Student.Gender = cmbGender.SelectedItem as Gender;
             _db.Entry(this.Student).State = System.Data.Entity.EntityState.Modified;
             _db.SaveChanges();
-            MessageBox.Show($"{Student} was successfully edited.", "Successful operation",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"{Student} was successfully edited.", 
+                "Successful modification", MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
             this.Close();
         }
         #endregion
