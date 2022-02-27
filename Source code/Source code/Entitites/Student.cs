@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Source_code.Entitites
 {
     [Table("Students")]
-    public  class Student
+    public class Student
     {
         #region Props
 
@@ -44,7 +41,7 @@ namespace Source_code.Entitites
             Pictures = new List<StudentPicture>();//So we don't get a null ref. exception;
         }
         #endregion
-  
+
         #region Phone num generator
 
         private string GeneratePhoneNumber()
@@ -53,14 +50,14 @@ namespace Source_code.Entitites
             var numbers = "0123456789";
             var rand = new Random();
 
-            for (int i = 0; i <9; i++)
+            for (int i = 0; i < 9; i++)
             {
-                var index=rand.Next(0,numbers.Length);
+                var index = rand.Next(0, numbers.Length);
                 number += numbers[index];
             }
             return number;
         }
         #endregion
     }
-   
+
 }
