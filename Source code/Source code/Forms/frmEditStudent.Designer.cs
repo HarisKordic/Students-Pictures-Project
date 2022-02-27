@@ -72,7 +72,7 @@
             this.grpBoxStudents.Size = new System.Drawing.Size(385, 276);
             this.grpBoxStudents.TabIndex = 1;
             this.grpBoxStudents.TabStop = false;
-            this.grpBoxStudents.Text = "Add a student:";
+            this.grpBoxStudents.Text = "Edit student:";
             // 
             // txtBoxPhoneNumber
             // 

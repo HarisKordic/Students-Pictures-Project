@@ -10,8 +10,8 @@ namespace Source_code.Forms
     public partial class frmEditStudent : Form
     {
         #region Form
-        private ConnectionToDb _db = Db.DataBase;
-        private Student Student;//Passed student;
+        private readonly ConnectionToDb _db = Db.DataBase;
+        private readonly Student Student;//Passed student;
         public frmEditStudent(Student student)
         {
             InitializeComponent();
@@ -55,13 +55,13 @@ namespace Source_code.Forms
         private void btnEditStudent_Click(object sender, EventArgs e)
         {
             this.Student.Name = txtBoxName.Text;
-            this.Student.Surname= txtBoxSurname.Text;
+            this.Student.Surname = txtBoxSurname.Text;
             this.Student.BirthDay = dtpBirthday.Value;
             this.Student.AcademicYear = txtBoxAcademicYear.Text;
-            this.Student.PhoneNumber= txtBoxPhoneNumber.Text;
+            this.Student.PhoneNumber = txtBoxPhoneNumber.Text;
             this.Student.Semester = int.Parse(cmbSemester.SelectedItem.ToString());
-            this.Student.Gender=cmbGender.SelectedItem as Gender;
-            _db.Entry(this.Student).State=System.Data.Entity.EntityState.Modified;
+            this.Student.Gender = cmbGender.SelectedItem as Gender;
+            _db.Entry(this.Student).State = System.Data.Entity.EntityState.Modified;
             _db.SaveChanges();
             MessageBox.Show($"{Student} was successfully edited.", "Successful operation",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
