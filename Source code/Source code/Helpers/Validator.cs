@@ -4,22 +4,22 @@ namespace Source_code.Helpers
 {
     internal static class Validator
     {
-        public static bool ValidateControl(Control control, ErrorProvider err, string message)
+        public static bool ValidateControl(Control control, ErrorProvider error, string message)
         {
             bool valid = true;
-            if (control is TextBox && string.IsNullOrWhiteSpace(control.Text))
+            if (control is TextBox textBox && string.IsNullOrWhiteSpace(textBox.Text))
                 valid = false;
-            else if (control is ComboBox && (control as ComboBox).SelectedIndex < 0)
+            else if (control is ComboBox box && box.SelectedIndex < 0)
                 valid = false;
-            else if (control is PictureBox && (control as PictureBox).Image == null)
+            else if (control is PictureBox pictureBox && pictureBox.Image == null)
                 valid = false;
 
             if (valid == false)
             {
-                err.SetError(control, message);
+                error.SetError(control, message);
                 return false;
             }
-            err.Clear();
+            error.Clear();
             return true;
         }
     }
