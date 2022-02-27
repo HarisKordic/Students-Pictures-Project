@@ -1,27 +1,23 @@
-﻿using System;
+﻿using Source_code.DataBase;
+using Source_code.Entitites;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Source_code.DataBase;
-using Source_code.Entitites;
 
 namespace Source_code.Forms
 {
     public partial class frmMainView : Form
     {
         #region Form
-        private ConnectionToDb _db= Db.DataBase;
+        private readonly ConnectionToDb _db = Db.DataBase;
         public frmMainView()
         {
             InitializeComponent();
-            dgvStudents.AutoGenerateColumns=false;
-            dgvStudentsSubjects.AutoGenerateColumns=false;
+            dgvStudents.AutoGenerateColumns = false;
+            dgvStudentsSubjects.AutoGenerateColumns = false;
         }
         private void frmMainView_Load(object sender, EventArgs e)
         {
@@ -35,20 +31,20 @@ namespace Source_code.Forms
         {
             try
             {
-                dgvStudentsSubjects.DataSource=null;
-                dgvStudentsSubjects.DataSource = list?? new List<StudentPassedSubject>();
+                dgvStudentsSubjects.DataSource = null;
+                dgvStudentsSubjects.DataSource = list ?? new List<StudentPassedSubject>();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"{ex.Message + Environment.NewLine}{ex.InnerException?.Message}");
-                //Show the inner ex only if it's not null;
+                //Show the inner exception only if it's not null;
             }
         }
-        private void LoadAllStudents(List <Student> list)
+        private void LoadAllStudents(List<Student> list)
         {
             try
             {
-                dgvStudents.DataSource=null;
+                dgvStudents.DataSource = null;
                 dgvStudents.DataSource = list ?? new List<Student>();
             }
             catch (Exception ex)
@@ -59,7 +55,7 @@ namespace Source_code.Forms
         }
         #endregion
 
-        #region Search for subject  or student
+        #region Search for subject/student
         private void txtBoxStudentSearch_TextChanged(object sender, EventArgs e)
         {
             var filter = txtBoxStudentSearch.Text.ToLower();
@@ -86,8 +82,8 @@ namespace Source_code.Forms
         #region Saving to file
         private void btnSaveStudentToFile_Click(object sender, EventArgs e)
         {
-            using (var fs = new FileStream("Students.csv",FileMode.OpenOrCreate))
-            using(var  sw=new StreamWriter(fs))
+            using (var fs = new FileStream("Students.csv", FileMode.OpenOrCreate))
+            using (var sw = new StreamWriter(fs))
             {
                 for (int i = 0; i < _db.Students.ToList().Count; i++)
                     sw.WriteLine(_db.Students.ToList()[i].StudentInfo);
@@ -111,7 +107,7 @@ namespace Source_code.Forms
         }
         #endregion
 
-        #region Deleteing a subject or looking up student's pictures
+        #region Deleting a subject or looking up student's pictures
         private void dgvStudentsSubjects_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -188,7 +184,7 @@ namespace Source_code.Forms
         private void dgvStudents_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var dgv = sender as DataGridView;
-            var student=dgv?.Rows[e.RowIndex].DataBoundItem as Student;//Selected student;
+            var student = dgv?.Rows[e.RowIndex].DataBoundItem as Student;//Selected student;
             this.Hide();
             new frmEditStudent(student).ShowDialog();
             //Refresh data from db:
