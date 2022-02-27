@@ -3,7 +3,7 @@
 namespace Source_code.Entitites
 {
     [Table("Genders")]
-    public  class Gender
+    public class Gender
     {
         #region Props
         public int Id { get; set; }
