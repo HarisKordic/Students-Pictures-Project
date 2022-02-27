@@ -116,5 +116,35 @@ namespace Source_code.Forms
         }
 
         #endregion
+
+        #region Deleting a displayed picture
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show($"Are you sure you want to permanently delete" +
+                                    $" the displayed picture for {Student}?",
+                        "Dangerous operation", MessageBoxButtons.YesNo,
+                        MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    var picToDelete = this.Student.Pictures[Counter];
+                    _db.StudentsPictures.Remove(picToDelete);
+                    _db.SaveChanges();
+                    MessageBox.Show($"Picture was successfully deleted for student {Student}",
+                        "Successfull operation", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("Dear user, the displayed picture won't be deleted.",
+                        "Successful operation", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message + Environment.NewLine}{ex.InnerException?.Message}");
+            }
+        }
+        #endregion
     }
 }

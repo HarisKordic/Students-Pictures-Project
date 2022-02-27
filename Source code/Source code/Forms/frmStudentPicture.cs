@@ -145,6 +145,8 @@ namespace Source_code.Forms
             this.Hide();
             new frmEditOrDeletePicture(this.Student).ShowDialog();
             //Loading newly addes content:
+            this.Student.Pictures=_db.StudentsPictures.Where(sp=>
+                sp.Student.Id==this.Student.Id).ToList();
             if (this.Student.Pictures.Count > 0)
             {
                 lblCurrentPicture.Text = $"Showing picture {Counter + 1} out of {Student.Pictures.Count}";
