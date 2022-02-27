@@ -42,12 +42,12 @@
             this.llblMail.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.llblMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.llblMail.LinkColor = System.Drawing.SystemColors.ButtonFace;
-            this.llblMail.Location = new System.Drawing.Point(350, 320);
+            this.llblMail.Location = new System.Drawing.Point(350, 329);
             this.llblMail.Name = "llblMail";
-            this.llblMail.Size = new System.Drawing.Size(78, 20);
+            this.llblMail.Size = new System.Drawing.Size(74, 20);
             this.llblMail.TabIndex = 2;
             this.llblMail.TabStop = true;
-            this.llblMail.Text = "Email me!";
+            this.llblMail.Text = "Email me";
             this.llblMail.VisitedLinkColor = System.Drawing.SystemColors.ActiveCaption;
             this.llblMail.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblMail_LinkClicked);
             // 
@@ -58,7 +58,7 @@
             this.llblGithub.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.llblGithub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.llblGithub.LinkColor = System.Drawing.SystemColors.ButtonFace;
-            this.llblGithub.Location = new System.Drawing.Point(360, 291);
+            this.llblGithub.Location = new System.Drawing.Point(360, 300);
             this.llblGithub.Name = "llblGithub";
             this.llblGithub.Size = new System.Drawing.Size(57, 20);
             this.llblGithub.TabIndex = 4;
@@ -86,9 +86,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.pictureBox1.Image = global::Source_code.Properties.Resources.sp_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(65, 25);
+            this.pictureBox1.Location = new System.Drawing.Point(65, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(668, 231);
+            this.pictureBox1.Size = new System.Drawing.Size(677, 269);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
