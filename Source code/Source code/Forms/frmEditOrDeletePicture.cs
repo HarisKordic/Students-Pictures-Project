@@ -1,29 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Source_code.DataBase;
+using Source_code.Entitites;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Source_code.DataBase;
-using Source_code.Entitites;
 
 namespace Source_code.Forms
 {
     public partial class frmEditOrDeletePicture : Form
     {
         #region Form
-        private ConnectionToDb _db = Db.DataBase;
-        private Student Student;
-        private  int Counter;
+        private readonly ConnectionToDb _db = Db.DataBase;
+        private readonly Student Student;
+        private int Counter;
         public frmEditOrDeletePicture(Student student)
         {
             InitializeComponent();
             this.Student = student;
             Counter = 0;
-            this.Student.Pictures = _db.StudentsPictures.Where(p => 
+            this.Student.Pictures = _db.StudentsPictures.Where(p =>
                 p.Student.Id == this.Student.Id).ToList();
         }
         #endregion
@@ -40,7 +36,7 @@ namespace Source_code.Forms
             }
             else
             {
-                pbPicture.Image=Image.FromFile("C:\\Users\\haris\\Desktop\\Student-Pictures-Project\\Source code" +
+                pbPicture.Image = Image.FromFile("C:\\Users\\haris\\Desktop\\Student-Pictures-Project\\Source code" +
                                                "\\Source code\\Resources\\no_image.jpg");
                 txtBoxDescritpion.Text = String.Empty;
                 MessageBox.Show($"Student {Student} ,currently does not have any" +
@@ -85,13 +81,13 @@ namespace Source_code.Forms
                 MessageBox.Show("Dear user, you got to the end (first picture)," +
                                 "please move forwards.", "Invalid move",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Counter=0;
+                Counter = 0;
             }
         }
         #endregion
 
         #region Editing selected picture
-        private void dtpDate_ValueChanged(object sender, EventArgs e) => 
+        private void dtpDate_ValueChanged(object sender, EventArgs e) =>
             Student.Pictures[Counter].Date = dtpDate.Value;
         private void txtBoxDescritpion_TextChanged(object sender, EventArgs e) =>
             Student.Pictures[Counter].Description = txtBoxDescritpion.Text;
@@ -104,12 +100,12 @@ namespace Source_code.Forms
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            _db.Entry(Student.Pictures[Counter]).State=System.Data.Entity.EntityState.Modified;
+            _db.Entry(Student.Pictures[Counter]).State = System.Data.Entity.EntityState.Modified;
             _db.SaveChanges();
             MessageBox.Show($"The displayed picture was successfully " +
                             $"edited for {Student}.", "Successful operation",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Student.Pictures=_db.StudentsPictures.
+            Student.Pictures = _db.StudentsPictures.
                 Where(p => p.Student.Id == this.Student.Id).ToList();//Loading pics from db;
             //Refreshing main view to newly edited info:
             pbPicture.Image = Helpers.ImageConverter.ByteToImage(Student.
