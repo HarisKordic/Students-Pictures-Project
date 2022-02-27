@@ -69,7 +69,7 @@
             this.grpBoxAddNewPicture.Size = new System.Drawing.Size(614, 638);
             this.grpBoxAddNewPicture.TabIndex = 3;
             this.grpBoxAddNewPicture.TabStop = false;
-            this.grpBoxAddNewPicture.Text = "Add new picture to student:";
+            this.grpBoxAddNewPicture.Text = "Add new picture to student";
             // 
             // btnEdit
             // 
@@ -162,7 +162,7 @@
             this.grpBoxDisplayPics.Size = new System.Drawing.Size(929, 638);
             this.grpBoxDisplayPics.TabIndex = 11;
             this.grpBoxDisplayPics.TabStop = false;
-            this.grpBoxDisplayPics.Text = "Student\'s avaliable pictures:";
+            this.grpBoxDisplayPics.Text = "Student\'s avaliable pictures";
             // 
             // Description
             // 

@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using Source_code.DataBase;
+using Source_code.Entitites;
+using Source_code.Helpers;
+using System;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Source_code.DataBase;
-using Source_code.Entitites;
-using Source_code.Helpers;
 
 namespace Source_code.Forms
 {
@@ -17,8 +13,8 @@ namespace Source_code.Forms
     {
         #region Form
 
-        private ConnectionToDb _db = Db.DataBase;
-        private Student Student;
+        private readonly ConnectionToDb _db = Db.DataBase;
+        private readonly Student Student;
         private int Counter;//For enumerating through  multiple pictures;
         public frmStudentPicture(Student student)
         {
@@ -48,7 +44,7 @@ namespace Source_code.Forms
                     _db.SaveChanges();
                     MessageBox.Show($"You successfully saved a new picture for {this.Student}!",
                         "Successfull operation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    AddPicture.Image=null;
+                    AddPicture.Image = null;
                     txtBoxDescription.Text = string.Empty;
                     LoadPicturesToStudent();
                 }
@@ -59,31 +55,15 @@ namespace Source_code.Forms
             }
         }
 
-        //Loading newly added pictures to the student;
+        //Loading newly saved pictures to the student:
         private void LoadPicturesToStudent()
         {
-            foreach (var picture in _db.StudentsPictures)
-            {
-                if (this.Student.Id == picture.Student.Id)//Coresponding student;
-                {
-                    if (!this.Student.Pictures.Exists(p => p.Id == picture.Id))//If the picture does not already exist, add it;
-                    {
-                        var addPic = new StudentPicture()
-                        {
-                            Id = picture.Id,
-                            Student = picture.Student,
-                            Description = picture.Description,
-                            Date = picture.Date,
-                            Picture = picture.Picture
-                        };
-                        this.Student.Pictures.Add(addPic);
-                        lblCurrentPicture.Text = $"Showing picture {Counter + 1} out of {Student.Pictures.Count}";
-                        DisplayPicture.Image = Helpers.ImageConverter.ByteToImage(Student.Pictures[0].Picture);
-                        lblDateOfPicture.Text = $"Date:{Student.Pictures[0].Date}";
-                        lblDescription.Text = Student.Pictures[0].Description;
-                    }
-                }
-            }
+            this.Student.Pictures = _db.StudentsPictures.Where(p =>
+                p.Student.Id == this.Student.Id).ToList();
+            lblCurrentPicture.Text = $"Showing picture {Counter + 1} out of {Student.Pictures.Count}";
+            DisplayPicture.Image = Helpers.ImageConverter.ByteToImage(Student.Pictures[0].Picture);
+            lblDateOfPicture.Text = $"Date:{Student.Pictures[0].Date}";
+            lblDescription.Text = Student.Pictures[0].Description;
         }
         private void AddPicture_Click(object sender, EventArgs e)
         {
@@ -102,8 +82,8 @@ namespace Source_code.Forms
         {
             if (Student.Pictures.Count > 0)
             {
-                lblCurrentPicture.Text = $"Showing picture {Counter+1} out of {Student.Pictures.Count}";
-                DisplayPicture.Image=Helpers.ImageConverter.ByteToImage(Student.Pictures[0].Picture);
+                lblCurrentPicture.Text = $"Showing picture {Counter + 1} out of {Student.Pictures.Count}";
+                DisplayPicture.Image = Helpers.ImageConverter.ByteToImage(Student.Pictures[0].Picture);
                 lblDateOfPicture.Text = $"Date:{Student.Pictures[0].Date.ToString("dd MM yyyy")}";
                 lblDescription.Text = Student.Pictures[0].Description;
             }
@@ -113,7 +93,7 @@ namespace Source_code.Forms
                                          $"Please add pictures to the student.";
                 DisplayPicture.Image = Image.FromFile("C:\\Users\\haris\\Desktop\\Student-Pictures-Project\\Source code\\Source code\\Resources\\no_image.jpg");
                 lblDateOfPicture.Text = string.Empty;
-                lblDescription.Text=string.Empty;
+                lblDescription.Text = string.Empty;
             }
         }
         #endregion
@@ -141,7 +121,7 @@ namespace Source_code.Forms
         private void btnLeft_Click(object sender, EventArgs e)
         {
             Counter--;
-            if(Counter >= 0 && Counter<=this.Student.Pictures.Count-1)
+            if (Counter >= 0 && Counter <= this.Student.Pictures.Count - 1)
             {
                 DisplayPicture.Image = Helpers.ImageConverter.ByteToImage(Student.Pictures
                     [Counter].Picture);
@@ -154,7 +134,7 @@ namespace Source_code.Forms
                 MessageBox.Show("Dear user, you got to the first picture, you can't " +
                                 "go any more backwards.", "Invalid action", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
-                Counter=0;
+                Counter = 0;
             }
         }
         #endregion
