@@ -145,11 +145,22 @@ namespace Source_code.Forms
             this.Hide();
             new frmEditOrDeletePicture(this.Student).ShowDialog();
             //Loading newly addes content:
-            lblCurrentPicture.Text = $"Showing picture {Counter + 1} out of {Student.Pictures.Count}";
-            Counter = 0;//Reset counter;
-            DisplayPicture.Image = Helpers.ImageConverter.ByteToImage(Student.Pictures[0].Picture);
-            lblDateOfPicture.Text = $"Date: {Student.Pictures[0].Date.ToString("dd MM yyyy")}";
-            lblDescription.Text = Student.Pictures[0].Description;
+            if (this.Student.Pictures.Count > 0)
+            {
+                lblCurrentPicture.Text = $"Showing picture {Counter + 1} out of {Student.Pictures.Count}";
+                Counter = 0;//Reset counter;
+                DisplayPicture.Image = Helpers.ImageConverter.ByteToImage(Student.Pictures[0].Picture);
+                lblDateOfPicture.Text = $"Date: {Student.Pictures[0].Date.ToString("dd MM yyyy")}";
+                lblDescription.Text = Student.Pictures[0].Description;
+            }
+            else//If student doesnt have any pictures:
+            {
+                lblCurrentPicture.Text = $"Student {Student} doesn't have available pictures to show." +
+                                         $"Please add pictures to the student.";
+                DisplayPicture.Image = Image.FromFile("C:\\Users\\haris\\Desktop\\Student-Pictures-Project\\Source code\\Source code\\Resources\\no_image.jpg");
+                lblDateOfPicture.Text = string.Empty;
+                lblDescription.Text = string.Empty;
+            }
             this.Show();
         }
         #endregion
