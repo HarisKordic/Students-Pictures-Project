@@ -1,21 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Source_code.DataBase;
+﻿using Source_code.DataBase;
 using Source_code.Entitites;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Source_code.Forms
 {
     public partial class frmAddNewStudent : Form
     {
         #region Form
-        private ConnectionToDb _db= Db.DataBase;
+        private readonly ConnectionToDb _db = Db.DataBase;
         public frmAddNewStudent()
         {
             InitializeComponent();
@@ -41,12 +36,12 @@ namespace Source_code.Forms
         #endregion
 
         #region Loading Semesters
-        private void LoadAvaliableSemesters()=> cmbSemester.DataSource = 
+        private void LoadAvaliableSemesters() => cmbSemester.DataSource =
             new List<int> { 1, 2, 3, 4, 5, 6 };
         #endregion
 
         #region Adding new student
-        private void btnSaveStudent_Click(object sender, EventArgs e)
+        private void btnAddStudent_Click(object sender, EventArgs e)
         {
             if (ValidateControls())
             {

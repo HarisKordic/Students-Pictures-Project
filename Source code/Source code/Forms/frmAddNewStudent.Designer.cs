@@ -42,7 +42,7 @@
             this.lblSemester = new System.Windows.Forms.Label();
             this.txtBoxSurname = new System.Windows.Forms.TextBox();
             this.lblSurname = new System.Windows.Forms.Label();
-            this.btnSaveStudent = new System.Windows.Forms.Button();
+            this.btnAddStudent = new System.Windows.Forms.Button();
             this.txtBoxName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.error = new System.Windows.Forms.ErrorProvider(this.components);
@@ -65,7 +65,7 @@
             this.grpBoxStudents.Controls.Add(this.lblSemester);
             this.grpBoxStudents.Controls.Add(this.txtBoxSurname);
             this.grpBoxStudents.Controls.Add(this.lblSurname);
-            this.grpBoxStudents.Controls.Add(this.btnSaveStudent);
+            this.grpBoxStudents.Controls.Add(this.btnAddStudent);
             this.grpBoxStudents.Controls.Add(this.txtBoxName);
             this.grpBoxStudents.Controls.Add(this.lblName);
             this.grpBoxStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -186,20 +186,20 @@
             this.lblSurname.TabIndex = 8;
             this.lblSurname.Text = "Surname:";
             // 
-            // btnSaveStudent
+            // btnAddStudent
             // 
-            this.btnSaveStudent.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSaveStudent.FlatAppearance.BorderSize = 100;
-            this.btnSaveStudent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSaveStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnSaveStudent.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnSaveStudent.Location = new System.Drawing.Point(300, 231);
-            this.btnSaveStudent.Name = "btnSaveStudent";
-            this.btnSaveStudent.Size = new System.Drawing.Size(64, 30);
-            this.btnSaveStudent.TabIndex = 7;
-            this.btnSaveStudent.Text = "Save ";
-            this.btnSaveStudent.UseVisualStyleBackColor = false;
-            this.btnSaveStudent.Click += new System.EventHandler(this.btnSaveStudent_Click);
+            this.btnAddStudent.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAddStudent.FlatAppearance.BorderSize = 100;
+            this.btnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.btnAddStudent.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddStudent.Location = new System.Drawing.Point(300, 231);
+            this.btnAddStudent.Name = "btnAddStudent";
+            this.btnAddStudent.Size = new System.Drawing.Size(64, 30);
+            this.btnAddStudent.TabIndex = 7;
+            this.btnAddStudent.Text = "Add";
+            this.btnAddStudent.UseVisualStyleBackColor = false;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // txtBoxName
             // 
@@ -244,7 +244,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox grpBoxStudents;
-        private System.Windows.Forms.Button btnSaveStudent;
+        private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.TextBox txtBoxName;
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtBoxSurname;
