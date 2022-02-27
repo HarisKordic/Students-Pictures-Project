@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Source_code.DataBase;
+﻿using Source_code.DataBase;
 using Source_code.Entitites;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Source_code.Forms
 {
@@ -16,11 +11,11 @@ namespace Source_code.Forms
     {
         #region Form
 
-        private ConnectionToDb _db = Db.DataBase;
+        private readonly ConnectionToDb _db = Db.DataBase;
         public frmAddSubjectToStudent()
         {
             InitializeComponent();
-            cmbGrade.DataSource = new List<int> {6, 7, 8, 9, 10};
+            cmbGrade.DataSource = new List<int> { 6, 7, 8, 9, 10 };
             LoadAvaliableStudents(_db.Students.ToList());
             LoadAvaliableSubjects(_db.Subjects.ToList());
         }
@@ -41,7 +36,7 @@ namespace Source_code.Forms
             }
         }
         #endregion
-      
+
         #region Loading students
         private void LoadAvaliableStudents(List<Student> students)
         {
@@ -61,8 +56,8 @@ namespace Source_code.Forms
         #region Adding a subject to a student
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            var subjectToAdd=cmbSubjects.SelectedItem as Subject;
-            var studentToAdd=cmbStudents.SelectedItem as Student;
+            var subjectToAdd = cmbSubjects.SelectedItem as Subject;
+            var studentToAdd = cmbStudents.SelectedItem as Student;
 
             //Only if the student did not already pass the subject, add it;
             if (!_db.StudentsPassedSubjects.ToList().Exists(

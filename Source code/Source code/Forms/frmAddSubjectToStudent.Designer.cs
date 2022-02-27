@@ -62,7 +62,7 @@
             this.grpBoxStudents.Size = new System.Drawing.Size(314, 216);
             this.grpBoxStudents.TabIndex = 3;
             this.grpBoxStudents.TabStop = false;
-            this.grpBoxStudents.Text = "Add";
+            this.grpBoxStudents.Text = "Add a subject to student:";
             // 
             // cmbGrade
             // 
