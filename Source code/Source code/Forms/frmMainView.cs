@@ -118,16 +118,20 @@ namespace Source_code.Forms
                     var button = dgv.Columns[e.ColumnIndex] as DataGridViewButtonColumn;
                     if (button?.Text == "Delete subject")//Button for deleteing;
                     {
-                        var studentSubject = dgv.Rows[e.RowIndex].DataBoundItem as StudentPassedSubject;
+                        var studentSubject = dgv.Rows[e.RowIndex].DataBoundItem
+                            as StudentPassedSubject;
                         if (MessageBox.Show($"Are you sure you want to permanently delete {studentSubject.Subject}" +
                                             $"  subject from {studentSubject.Student} student?", "Warning you're " +
-                                "about to delete a record from the Data Base", MessageBoxButtons.YesNo,
-                                MessageBoxIcon.Warning) == DialogResult.Yes)
+                                "about to delete a record from the Data Base",
+                                MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+                            == DialogResult.Yes)
                         {
                             _db.StudentsPassedSubjects.Remove(studentSubject);
                             _db.SaveChanges();
                             LoadStudentsSubjects(_db.StudentsPassedSubjects.ToList());
-                            MessageBox.Show("Record deleted successfully!");
+                            MessageBox.Show("Subject successfully deleted.",
+                                "Successful operation", MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
                         }
                         else
                             MessageBox.Show("Deletion successfully terminated!" +
