@@ -39,10 +39,11 @@ namespace Source_code.Forms
                 pbPicture.Image = Image.FromFile("C:\\Users\\haris\\Desktop\\Student-Pictures-Project\\Source code" +
                                                "\\Source code\\Resources\\no_image.jpg");
                 txtBoxDescritpion.Text = String.Empty;
+                this.Show();
                 MessageBox.Show($"Student {Student} ,currently does not have any" +
                                 " pictures added to edit/modify. Please, add pictures to this student," +
                                 " and then try to edit/modify them.", "Action not avaliable",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                 MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         #endregion
