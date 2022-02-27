@@ -62,7 +62,7 @@
             this.grpBoxStudents.Size = new System.Drawing.Size(314, 216);
             this.grpBoxStudents.TabIndex = 4;
             this.grpBoxStudents.TabStop = false;
-            this.grpBoxStudents.Text = "Edit";
+            this.grpBoxStudents.Text = "Edit:";
             // 
             // cmbGrade
             // 

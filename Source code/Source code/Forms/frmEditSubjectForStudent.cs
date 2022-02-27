@@ -11,12 +11,12 @@ namespace Source_code.Forms
     {
         #region Form
 
-        private ConnectionToDb _db = Db.DataBase;
-        private StudentPassedSubject Sp;
-        public frmEditSubjectForStudent(StudentPassedSubject sp)
+        private readonly ConnectionToDb _db = Db.DataBase;
+        private readonly StudentPassedSubject SPS;
+        public frmEditSubjectForStudent(StudentPassedSubject sps)
         {
             InitializeComponent();
-            this.Sp = sp;
+            this.SPS = sps;
             LoadAvaliableStudents(_db.Students.ToList());
             LoadAvaliableSubjects(_db.Subjects.ToList());
             cmbGrade.DataSource = new List<int>() { 6, 7, 8, 9, 10 };
@@ -59,23 +59,23 @@ namespace Source_code.Forms
         #region Load data onto the form
         private void LoadInformation()
         {
-            cmbStudents.SelectedItem = this.Sp.Student;
+            cmbStudents.SelectedItem = this.SPS.Student;
             cmbStudents.Enabled = false;//So no one can edit the student, only its assigned subject;
-            cmbSubjects.SelectedItem = this.Sp.Subject;
-            cmbGrade.SelectedItem = this.Sp.Grade;
-            dtpDate.Value = this.Sp.Date;
+            cmbSubjects.SelectedItem = this.SPS.Subject;
+            cmbGrade.SelectedItem = this.SPS.Grade;
+            dtpDate.Value = this.SPS.Date;
         }
         #endregion
 
         #region Editing information for passed student
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            this.Sp.Subject = cmbSubjects.SelectedItem as Subject;
-            this.Sp.Grade = int.Parse(cmbGrade.SelectedItem.ToString());
-            this.Sp.Date = dtpDate.Value;
-            _db.Entry(this.Sp).State = System.Data.Entity.EntityState.Modified;
+            this.SPS.Subject = cmbSubjects.SelectedItem as Subject;
+            this.SPS.Grade = int.Parse(cmbGrade.SelectedItem.ToString());
+            this.SPS.Date = dtpDate.Value;
+            _db.Entry(this.SPS).State = System.Data.Entity.EntityState.Modified;
             _db.SaveChanges();
-            MessageBox.Show($"Contents of subject {Sp.Subject}  were edited for {Sp.Student}.", 
+            MessageBox.Show($"Contents of subject {SPS.Subject}  were edited for {SPS.Student}.",
                 "Successful modification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
