@@ -1,4 +1,3 @@
-C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source code.csproj.AssemblyReference.cache
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source code.csproj.SuggestedBindingRedirects.cache
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source_code.Properties.Resources.resources
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source code.csproj.GenerateResource.cache
