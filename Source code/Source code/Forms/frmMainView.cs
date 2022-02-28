@@ -82,28 +82,45 @@ namespace Source_code.Forms
         #region Saving to file
         private void btnSaveStudentToFile_Click(object sender, EventArgs e)
         {
-            using (var fs = new FileStream("Students.csv", FileMode.OpenOrCreate))
-            using (var sw = new StreamWriter(fs))
-            {
-                for (int i = 0; i < _db.Students.ToList().Count; i++)
-                    sw.WriteLine(_db.Students.ToList()[i].StudentInfo);
-                MessageBox.Show("You successfully saved all of the students showed in the table!" +
-                                " You can find the file under the name: 'Students.csv'",
-                    "Successfull operation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-        }
+            sfd.Title = "Choose where to save the file with student information...";
+            sfd.Filter = "CSV files (*.csv)|*.csv";//For  saving in .csv format;
 
+
+            if (sfd.ShowDialog() == DialogResult.OK && sfd.FileName.Length > 0)
+                //If file name is not empty and dialog window is opened:
+            {
+                using (var sw = new StreamWriter(sfd.FileName))
+                {
+                    for (int i = 0; i < _db.Students.ToList().Count; i++)
+                        sw.WriteLine(_db.Students.ToList()[i].StudentInfo);
+
+                    MessageBox.Show("You successfully saved all of the students showed in the table!" +
+                                    $" You can find the file on: '{sfd.FileName}'",
+                        "Successfull operation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            sfd.Dispose();//Call the dispose method;
+        }
         private void btnSaveStudentsSubjectsToFile_Click(object sender, EventArgs e)
         {
-            using (var fs = new FileStream("StudentsPassedSubjects.csv", FileMode.OpenOrCreate))
-            using (var sw = new StreamWriter(fs))
+            sfd.Title = "Choose where to save the file with student passed subjects information...";
+            sfd.Filter = "CSV files (*.csv)|*.csv";//For  saving in .csv format;
+
+
+            if (sfd.ShowDialog() == DialogResult.OK && sfd.FileName.Length > 0)
+                //If file name is not empty and dialog window is opened:
             {
-                for (int i = 0; i < _db.StudentsPassedSubjects.ToList().Count; i++)
-                    sw.WriteLine(_db.StudentsPassedSubjects.ToList()[i]);//ToString method of the given object is called;
-                MessageBox.Show("You successfully saved all of the students and their passed subjects showed in the table!" +
-                                " You can find the file under the name: 'StudentsPassedSubjects.csv'",
-                    "Successfull operation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                using (var sw = new StreamWriter(sfd.FileName))
+                {
+                    for (int i = 0; i < _db.StudentsPassedSubjects.ToList().Count; i++)
+                        sw.WriteLine(_db.StudentsPassedSubjects.ToList()[i].ToString());
+
+                    MessageBox.Show("You successfully saved all of the students passed subjects showed in the table!" +
+                                    $" You can find the file on: '{sfd.FileName}'",
+                        "Successfull operation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+            sfd.Dispose();//Call the dispose method;
         }
         #endregion
 
