@@ -48,12 +48,6 @@
             this.txtBoxSubjectSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.dgvStudentsSubjects = new System.Windows.Forms.DataGridView();
-            this.Student = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DeleteSubject = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ShowPictures = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Namee = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Surname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Index = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,6 +58,12 @@
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Student = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DeleteSubject = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ShowPictures = new System.Windows.Forms.DataGridViewButtonColumn();
             this.grpBoxStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.grpBoxStudentsSubjects.SuspendLayout();
@@ -309,55 +309,6 @@
             this.dgvStudentsSubjects.TabIndex = 1;
             this.dgvStudentsSubjects.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentsSubjects_CellClick);
             // 
-            // Student
-            // 
-            this.Student.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Student.DataPropertyName = "Student";
-            this.Student.HeaderText = "Student";
-            this.Student.Name = "Student";
-            this.Student.ReadOnly = true;
-            // 
-            // Subject
-            // 
-            this.Subject.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Subject.DataPropertyName = "Subject";
-            this.Subject.HeaderText = "Subject";
-            this.Subject.Name = "Subject";
-            this.Subject.ReadOnly = true;
-            // 
-            // Grade
-            // 
-            this.Grade.DataPropertyName = "Grade";
-            this.Grade.HeaderText = "Grade";
-            this.Grade.Name = "Grade";
-            this.Grade.ReadOnly = true;
-            // 
-            // Date
-            // 
-            this.Date.DataPropertyName = "DateToShow";
-            this.Date.HeaderText = "Date";
-            this.Date.Name = "Date";
-            this.Date.ReadOnly = true;
-            this.Date.Width = 318;
-            // 
-            // DeleteSubject
-            // 
-            this.DeleteSubject.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DeleteSubject.HeaderText = "Delete subject";
-            this.DeleteSubject.Name = "DeleteSubject";
-            this.DeleteSubject.ReadOnly = true;
-            this.DeleteSubject.Text = "Delete subject";
-            this.DeleteSubject.UseColumnTextForButtonValue = true;
-            // 
-            // ShowPictures
-            // 
-            this.ShowPictures.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ShowPictures.HeaderText = "Show pictures";
-            this.ShowPictures.Name = "ShowPictures";
-            this.ShowPictures.ReadOnly = true;
-            this.ShowPictures.Text = "Show student\'s pictures";
-            this.ShowPictures.UseColumnTextForButtonValue = true;
-            // 
             // Namee
             // 
             this.Namee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -434,6 +385,55 @@
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // Student
+            // 
+            this.Student.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Student.DataPropertyName = "Student";
+            this.Student.HeaderText = "Student";
+            this.Student.Name = "Student";
+            this.Student.ReadOnly = true;
+            // 
+            // Subject
+            // 
+            this.Subject.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Subject.DataPropertyName = "Subject";
+            this.Subject.HeaderText = "Subject";
+            this.Subject.Name = "Subject";
+            this.Subject.ReadOnly = true;
+            // 
+            // Grade
+            // 
+            this.Grade.DataPropertyName = "Grade";
+            this.Grade.HeaderText = "Grade";
+            this.Grade.Name = "Grade";
+            this.Grade.ReadOnly = true;
+            // 
+            // Date
+            // 
+            this.Date.DataPropertyName = "DateToShow";
+            this.Date.HeaderText = "Date";
+            this.Date.Name = "Date";
+            this.Date.ReadOnly = true;
+            this.Date.Width = 318;
+            // 
+            // DeleteSubject
+            // 
+            this.DeleteSubject.HeaderText = "Delete subject";
+            this.DeleteSubject.Name = "DeleteSubject";
+            this.DeleteSubject.ReadOnly = true;
+            this.DeleteSubject.Text = "Delete subject";
+            this.DeleteSubject.UseColumnTextForButtonValue = true;
+            this.DeleteSubject.Width = 200;
+            // 
+            // ShowPictures
+            // 
+            this.ShowPictures.HeaderText = "Show pictures";
+            this.ShowPictures.Name = "ShowPictures";
+            this.ShowPictures.ReadOnly = true;
+            this.ShowPictures.Text = "Show student\'s pictures";
+            this.ShowPictures.UseColumnTextForButtonValue = true;
+            this.ShowPictures.Width = 200;
+            // 
             // frmMainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -471,12 +471,6 @@
         private System.Windows.Forms.Button btnSaveStudentsSubjectsToFile;
         private System.Windows.Forms.Button btnAddStudents;
         private System.Windows.Forms.Button btnAddSubjectToStudent;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Student;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
-        private System.Windows.Forms.DataGridViewButtonColumn DeleteSubject;
-        private System.Windows.Forms.DataGridViewButtonColumn ShowPictures;
         private System.Windows.Forms.DataGridViewTextBoxColumn Namee;
         private System.Windows.Forms.DataGridViewTextBoxColumn Surname;
         private System.Windows.Forms.DataGridViewTextBoxColumn Index;
@@ -487,5 +481,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Student;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date;
+        private System.Windows.Forms.DataGridViewButtonColumn DeleteSubject;
+        private System.Windows.Forms.DataGridViewButtonColumn ShowPictures;
     }
 }
