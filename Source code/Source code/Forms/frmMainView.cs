@@ -113,43 +113,31 @@ namespace Source_code.Forms
             try
             {
                 var dgv = sender as DataGridView;
+                var studentSubject = dgv?.Rows[e.RowIndex].DataBoundItem as StudentPassedSubject;
                 if (dgv?.Columns[e.ColumnIndex] is DataGridViewButtonColumn)//?. because of possible Null ref. exception;
                 {
                     var button = dgv.Columns[e.ColumnIndex] as DataGridViewButtonColumn;
-                    if (button?.Text == "Delete subject")//Button for deleteing;
+                    if (MessageBox.Show($"Are you sure you want to permanently delete {studentSubject.Subject}" +
+                                        $"  subject from {studentSubject.Student} student?", "Warning you're " +
+                            "about to delete a record from the Data Base",
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+                        == DialogResult.Yes)
                     {
-                        var studentSubject = dgv.Rows[e.RowIndex].DataBoundItem
-                            as StudentPassedSubject;
-                        if (MessageBox.Show($"Are you sure you want to permanently delete {studentSubject.Subject}" +
-                                            $"  subject from {studentSubject.Student} student?", "Warning you're " +
-                                "about to delete a record from the Data Base",
-                                MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
-                            == DialogResult.Yes)
-                        {
-                            _db.StudentsPassedSubjects.Remove(studentSubject);
-                            _db.SaveChanges();
-                            LoadStudentsSubjects(_db.StudentsPassedSubjects.ToList());
-                            MessageBox.Show("Subject successfully deleted.",
-                                "Successful operation", MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
-                        }
-                        else
-                            MessageBox.Show("Deletion successfully terminated!" +
-                                            " Your record won't be deleted.", "Operation stopped",
-                                MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        _db.StudentsPassedSubjects.Remove(studentSubject);
+                        _db.SaveChanges();
+                        LoadStudentsSubjects(_db.StudentsPassedSubjects.ToList());
+                        MessageBox.Show("Subject successfully deleted.",
+                            "Successful operation", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
                     }
-                    else//Button for pictures;
-                    {
-                        var studentSubject = dgv.Rows[e.RowIndex].DataBoundItem as StudentPassedSubject;
-                        this.Hide();
-                        new frmStudentPicture(studentSubject?.Student).ShowDialog();
-                        this.Show();
-                    }
+                    else
+                        MessageBox.Show("Deletion successfully terminated!" +
+                                        " Your record won't be deleted.", "Operation stopped",
+                            MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 #region Editing a subject for a student
                 else//Editing triggered
                 {
-                    var studentSubject = dgv?.Rows[e.RowIndex].DataBoundItem as StudentPassedSubject;
                     this.Hide();
                     new frmEditSubjectForStudent(studentSubject).ShowDialog();
                     LoadStudentsSubjects(_db.StudentsPassedSubjects.ToList());//Refresh grid;
@@ -188,28 +176,37 @@ namespace Source_code.Forms
         private void dgvStudents_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var dgv = sender as DataGridView;
+            var student = dgv?.Rows[e.RowIndex].DataBoundItem as Student;//Selected student;
             if (dgv?.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
             {
-                var student = dgv?.Rows[e.RowIndex].DataBoundItem as Student;//Selected student;
-                if (MessageBox.Show($"Are you sure you want to permanently delete " +
-                                    $"{student}?", "Dangerous action",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                var button = dgv.Columns[e.ColumnIndex] as DataGridViewButtonColumn;
+                if (button?.Text == "Delete")//Button for deleting;
                 {
-                    _db.Students.Remove(student);
-                    _db.SaveChanges();
-                    LoadAllStudents(_db.Students.ToList());
-                    MessageBox.Show("Student successfully deleted!", 
-                        "Successful operation", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
+                    if (MessageBox.Show($"Are you sure you want to permanently delete " +
+                                        $"{student}?", "Dangerous action",
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        _db.Students.Remove(student);
+                        _db.SaveChanges();
+                        LoadAllStudents(_db.Students.ToList());
+                        MessageBox.Show("Student successfully deleted!",
+                            "Successful operation", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                    }
+                    else
+                        MessageBox.Show($"Student {student} won't be deleted.",
+                            "Operation cancelled", MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
                 }
-                else
-                    MessageBox.Show($"Student {student} won't be deleted.", 
-                        "Operation cancelled", MessageBoxButtons.OK, 
-                        MessageBoxIcon.Information);
+                else//Button for pictures;
+                {
+                    this.Hide();
+                    new frmStudentPicture(student).ShowDialog();
+                    this.Show();
+                }
             }
             else
             {
-                var student = dgv?.Rows[e.RowIndex].DataBoundItem as Student;//Selected student;
                 this.Hide();
                 new frmEditStudent(student).ShowDialog();
                 //Refresh data from db:

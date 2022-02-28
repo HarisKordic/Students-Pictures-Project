@@ -58,12 +58,12 @@
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ShowPictures = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Student = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DeleteSubject = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ShowPictures = new System.Windows.Forms.DataGridViewButtonColumn();
             this.grpBoxStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.grpBoxStudentsSubjects.SuspendLayout();
@@ -159,7 +159,8 @@
             this.AcademicYear,
             this.Email,
             this.PhoneNumber,
-            this.Delete});
+            this.Delete,
+            this.ShowPictures});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -276,8 +277,7 @@
             this.Subject,
             this.Grade,
             this.Date,
-            this.DeleteSubject,
-            this.ShowPictures});
+            this.DeleteSubject});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -384,6 +384,16 @@
             this.Delete.ReadOnly = true;
             this.Delete.Text = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
+            this.Delete.Width = 200;
+            // 
+            // ShowPictures
+            // 
+            this.ShowPictures.HeaderText = "Show pictures";
+            this.ShowPictures.Name = "ShowPictures";
+            this.ShowPictures.ReadOnly = true;
+            this.ShowPictures.Text = "Show students pictures";
+            this.ShowPictures.UseColumnTextForButtonValue = true;
+            this.ShowPictures.Width = 200;
             // 
             // Student
             // 
@@ -423,16 +433,7 @@
             this.DeleteSubject.ReadOnly = true;
             this.DeleteSubject.Text = "Delete subject";
             this.DeleteSubject.UseColumnTextForButtonValue = true;
-            this.DeleteSubject.Width = 200;
-            // 
-            // ShowPictures
-            // 
-            this.ShowPictures.HeaderText = "Show pictures";
-            this.ShowPictures.Name = "ShowPictures";
-            this.ShowPictures.ReadOnly = true;
-            this.ShowPictures.Text = "Show student\'s pictures";
-            this.ShowPictures.UseColumnTextForButtonValue = true;
-            this.ShowPictures.Width = 200;
+            this.DeleteSubject.Width = 150;
             // 
             // frmMainView
             // 
@@ -481,11 +482,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.DataGridViewButtonColumn ShowPictures;
         private System.Windows.Forms.DataGridViewTextBoxColumn Student;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
         private System.Windows.Forms.DataGridViewTextBoxColumn Date;
         private System.Windows.Forms.DataGridViewButtonColumn DeleteSubject;
-        private System.Windows.Forms.DataGridViewButtonColumn ShowPictures;
     }
 }
