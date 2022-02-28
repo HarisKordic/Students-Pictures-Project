@@ -63,6 +63,7 @@
             this.AcademicYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.grpBoxStudents.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.grpBoxStudentsSubjects.SuspendLayout();
@@ -157,7 +158,8 @@
             this.Semester,
             this.AcademicYear,
             this.Email,
-            this.PhoneNumber});
+            this.PhoneNumber,
+            this.Delete});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -358,6 +360,7 @@
             // 
             // Namee
             // 
+            this.Namee.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Namee.DataPropertyName = "Name";
             this.Namee.HeaderText = "Name";
             this.Namee.Name = "Namee";
@@ -409,19 +412,27 @@
             // 
             // Email
             // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Email.DataPropertyName = "Email";
             this.Email.HeaderText = "Email";
             this.Email.Name = "Email";
             this.Email.ReadOnly = true;
-            this.Email.Width = 606;
             // 
             // PhoneNumber
             // 
+            this.PhoneNumber.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.PhoneNumber.DataPropertyName = "PhoneNumber";
             this.PhoneNumber.HeaderText = "Phone number";
             this.PhoneNumber.Name = "PhoneNumber";
             this.PhoneNumber.ReadOnly = true;
-            this.PhoneNumber.Width = 110;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Delete student";
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Text = "Delete";
+            this.Delete.UseColumnTextForButtonValue = true;
             // 
             // frmMainView
             // 
@@ -475,5 +486,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn AcademicYear;
         private System.Windows.Forms.DataGridViewTextBoxColumn Email;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }

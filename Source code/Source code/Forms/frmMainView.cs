@@ -188,12 +188,34 @@ namespace Source_code.Forms
         private void dgvStudents_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             var dgv = sender as DataGridView;
-            var student = dgv?.Rows[e.RowIndex].DataBoundItem as Student;//Selected student;
-            this.Hide();
-            new frmEditStudent(student).ShowDialog();
-            //Refresh data from db:
-            LoadAllStudents(_db.Students.ToList());
-            this.Show();
+            if (dgv?.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+            {
+                var student = dgv?.Rows[e.RowIndex].DataBoundItem as Student;//Selected student;
+                if (MessageBox.Show($"Are you sure you want to permanently delete " +
+                                    $"{student}?", "Dangerous action",
+                        MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    _db.Students.Remove(student);
+                    _db.SaveChanges();
+                    LoadAllStudents(_db.Students.ToList());
+                    MessageBox.Show("Student successfully deleted!", 
+                        "Successful operation", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+                else
+                    MessageBox.Show($"Student {student} won't be deleted.", 
+                        "Operation cancelled", MessageBoxButtons.OK, 
+                        MessageBoxIcon.Information);
+            }
+            else
+            {
+                var student = dgv?.Rows[e.RowIndex].DataBoundItem as Student;//Selected student;
+                this.Hide();
+                new frmEditStudent(student).ShowDialog();
+                //Refresh data from db:
+                LoadAllStudents(_db.Students.ToList());
+                this.Show();
+            }
         }
         #endregion
     }
