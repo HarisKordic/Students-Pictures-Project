@@ -25,4 +25,3 @@ C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debu
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source_code.Forms.frmAddSubjectToStudent.resources
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source_code.Forms.frmEditStudent.resources
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source_code.Forms.frmEditSubjectForStudent.resources
-C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Debug\Source code.csproj.AssemblyReference.cache
