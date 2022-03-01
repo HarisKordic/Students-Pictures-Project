@@ -25,4 +25,3 @@ C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Rele
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.csproj.CopyComplete
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.exe
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.pdb
-C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.csproj.AssemblyReference.cache
