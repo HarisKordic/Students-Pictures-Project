@@ -36,8 +36,7 @@ namespace Source_code.Forms
             }
             else
             {
-                pbPicture.Image = Image.FromFile("C:\\Users\\haris\\Desktop\\Student-Pictures-Project\\Source code" +
-                                               "\\Source code\\Resources\\no_image.jpg");
+                pbPicture.Image = Image.FromFile("..\\..\\Resources\\no_image.jpg");
                 txtBoxDescritpion.Text = String.Empty;
                 this.Show();
                 MessageBox.Show($"Student {Student} ,currently does not have any" +

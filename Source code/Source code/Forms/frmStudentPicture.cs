@@ -91,7 +91,7 @@ namespace Source_code.Forms
             {
                 lblCurrentPicture.Text = $"Student {Student} doesn't have available pictures to show." +
                                          $"Please add pictures to the student.";
-                DisplayPicture.Image = Image.FromFile("C:\\Users\\haris\\Desktop\\Student-Pictures-Project\\Source code\\Source code\\Resources\\no_image.jpg");
+                DisplayPicture.Image = Image.FromFile("..\\..\\Resources\\no_image.jpg");
                 lblDateOfPicture.Text = string.Empty;
                 lblDescription.Text = string.Empty;
             }
@@ -159,7 +159,7 @@ namespace Source_code.Forms
             {
                 lblCurrentPicture.Text = $"Student {Student} doesn't have available pictures to show." +
                                          $"Please add pictures to the student.";
-                DisplayPicture.Image = Image.FromFile("C:\\Users\\haris\\Desktop\\Student-Pictures-Project\\Source code\\Source code\\Resources\\no_image.jpg");
+                DisplayPicture.Image = Image.FromFile("..\\..\\Resources\\no_image.jpg");
                 lblDateOfPicture.Text = string.Empty;
                 lblDescription.Text = string.Empty;
             }
