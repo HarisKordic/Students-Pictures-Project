@@ -61,5 +61,5 @@ _NOTE: If you have any comments regarding the latest build,  please open a new i
 <li>Deleting pictures for students</li>
 <li>Saving to a file</li>
 </ol>
-**_implement error signaling as well as user information and guidance._**14:01 2.3.2022.
+**_implement error signaling as well as user information and guidance._**
 <hr>
