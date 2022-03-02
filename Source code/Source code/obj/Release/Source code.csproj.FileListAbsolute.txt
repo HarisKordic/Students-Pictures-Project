@@ -37,7 +37,6 @@ C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code
 C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\bin\Release\EntityFramework.xml
 C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\bin\Release\EntityFramework.SqlServer.xml
 C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\bin\Release\System.Data.SQLite.xml
-C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.csproj.AssemblyReference.cache
 C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.csproj.SuggestedBindingRedirects.cache
 C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source_code.Forms.frmAddNewStudent.resources
 C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source_code.Forms.frmAddSubjectToStudent.resources
