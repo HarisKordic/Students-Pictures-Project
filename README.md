@@ -4,7 +4,7 @@
 
 <hr>
 
-**Link to latest release:** ~ [Latest release](https://github.com/HarisKordic/Student-Pictures-Project/releases/tag/v1.0)
+**Link to latest release** ~ [Latest release](https://github.com/HarisKordic/Student-Pictures-Project/releases/tag/v1.0)
 
 <hr>
 
@@ -37,7 +37,7 @@ _NOTE: If you have any comments regarding the latest build,  please open a new i
       <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Project%20pictures/Add_subject.png">	 
 
 5.0 ~ Editing a student and/or a passed subject for a student:
-      With a mouse click, directly on the wanted student (or on a passed subject of a student), a new dialog box will be opened where the user can edit all of the relevant information for the student and/or for a passed subject.<br>
+      With a mouse click, directly on the wanted student (or on a passed subject of a student), a new dialog box will be opened where the user can edit all of the relevant information for the student and/or for a passed subject.<br><br>
       <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Project%20pictures/Edit_student.jpg"> <br> <br>
       <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Project%20pictures/Edit_subject.jpg">
 
@@ -51,7 +51,7 @@ _NOTE: If you have any comments regarding the latest build,  please open a new i
       <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Project%20pictures/Students_pics.png"> <br><br>
       <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Project%20pictures/Edit_pics.png">
 
-**_All of the functionallities such as:
+**_All of the functionallities such as_**:
 <ol>
 <li>Adding students/subjects</li>
 <li>Deleting students/subjects</li>
@@ -61,5 +61,5 @@ _NOTE: If you have any comments regarding the latest build,  please open a new i
 <li>Deleting pictures for students</li>
 <li>Saving to a file</li>
 </ol>
-**_ implement error signaling as well as user information and guidance_**.
+**implement error signaling as well as user information and guidance**.
 <hr>
