@@ -32,12 +32,12 @@ _NOTE: If you have any comments and/or improvements regarding the latest build, 
       <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Project%20pictures/Save_to_file.png">
 
 4.0 ~ Adding a new student and/or a new passed subject to a student:
-      With the click of the button to add a new student, a new dialog box will open, where the user can input some of the needed information to add the new student. Similar to that, with the click of the button to add a new subject, the user is promted  with a dialog box where he/she can choose a subject and a student, date of the grade and the grade itself.<br><br>
+      With the click of the button to add a new student, a new dialog box will open, where the user can input some of the needed information to add the new student. Similarly, with the click of the button to add a new subject, the user is promted  with a dialog box where he/she can choose a subject and a student, date of the grade and the grade itself.<br><br>
       <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Project%20pictures/Add_student.png"> <br><br>
       <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Project%20pictures/Add_subject.png">	 
 
 5.0 ~ Editing a student and/or a passed subject for a student:
-      With a mouse click, directly on the wanted student (or on a passed subject of a student), a new dialog box will be opened where the user can edit all of the relevant information for the student and/or for a passed subject.<br><br>
+      With a mouse click, directly on the wanted student (or on a passed subject of a student), a new dialog box will be opened where the user can edit all relevant information for the student and/or for a passed subject.<br><br>
       <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Project%20pictures/Edit_student.jpg"> <br> <br>
       <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Project%20pictures/Edit_subject.jpg">
 
