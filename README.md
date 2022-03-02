@@ -1,5 +1,7 @@
 # Student-Pictures-Project
 
+![](https://komarev.com/ghpvc/?username=Student-Pictures-Project&color=lightgrey)
+
 <hr>
 
 **Link to latest release**
