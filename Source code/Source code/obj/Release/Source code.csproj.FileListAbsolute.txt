@@ -52,4 +52,3 @@ C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code
 C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.csproj.CopyComplete
 C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.exe
 C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.pdb
-C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.csproj.AssemblyReference.cache
