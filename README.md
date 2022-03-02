@@ -48,7 +48,6 @@ _P.S. If you have any comments regarding the latest build,  please open a new is
 
 7.0 ~ Viewing students pictures:
       With the click of the button "View students pictures", the user will be shown a new dialog box where all of the students currently added pictures will be displayed. The user can add new pictures, edit old ones as well as delete       them.<br><br>
-      <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Product%20pictures/Students_pics.png"> <br> <br>
-      <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Product%20pictures/Edit_pics.png">
+      <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Product%20pictures/Students_pics.png"> <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Product%20pictures/Edit_pics.png">
 
 <hr>
