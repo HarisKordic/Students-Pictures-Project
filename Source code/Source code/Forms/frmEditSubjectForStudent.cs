@@ -11,8 +11,8 @@ namespace Source_code.Forms
     {
         #region Form
 
-        private  ConnectionToDb _db = Db.DataBase;
-        private  StudentPassedSubject SPS;
+        private readonly ConnectionToDb _db = Db.DataBase;
+        private readonly StudentPassedSubject SPS;
         public frmEditSubjectForStudent(StudentPassedSubject sps)
         {
             InitializeComponent();

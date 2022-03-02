@@ -11,8 +11,8 @@ namespace Source_code.Forms
     public partial class frmEditOrDeletePicture : Form
     {
         #region Form
-        private  ConnectionToDb _db = Db.DataBase;
-        private  Student Student;
+        private readonly ConnectionToDb _db = Db.DataBase;
+        private readonly Student Student;
         private int Counter;
         public frmEditOrDeletePicture(Student student)
         {

@@ -10,7 +10,7 @@ namespace Source_code.Forms
     public partial class frmAddNewStudent : Form
     {
         #region Form
-        private  ConnectionToDb _db = Db.DataBase;
+        private readonly ConnectionToDb _db = Db.DataBase;
         public frmAddNewStudent()
         {
             InitializeComponent();
