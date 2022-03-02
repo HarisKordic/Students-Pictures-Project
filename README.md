@@ -16,6 +16,8 @@ For communicating with the  database I used a NuGet package called SQL.ES6 and f
 
 _P.S. If you have any comments regarding the latest build,  please open a new issue and let me know :D_
 
+<hr>
+
 1.0 ~ Intro screen:
       In this starting dialog you can find my contact information such as mail and a link to my github account. The dialog itself is very simple as it's main purpose is to start the program.<br>
       <img src="">
@@ -43,6 +45,9 @@ _P.S. If you have any comments regarding the latest build,  please open a new is
       With the corresponding click of the button "Delete" the user can delete the selected student or his subject.<br>
       <img src="">
 
-7.0 ~ 
+7.0 ~ Viewing students pictures:
+      With the click of the button "View students pictures", the user will be shown a new dialog box where all of the students currently added pictures will be displayed. The user can add new pictures, edit old ones as well as delete       them.<br>
+      <img src=""> <br>
+      <img src="">
 
 <hr>
