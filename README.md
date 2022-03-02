@@ -4,7 +4,7 @@
 
 <hr>
 
-**Link to latest release** ~ [Latest release](https://github.com/HarisKordic/Student-Pictures-Project/releases/tag/v1.0)
+**Link to latest release** ~ [DOWNLOAD](https://github.com/HarisKordic/Students-Pictures-Project/releases/download/v1.0/Setup.rar)
 
 <hr>
 
