@@ -54,8 +54,8 @@ _NOTE: If you have any comments and/or improvements regarding the latest build, 
 **_All of the functionallities such as:_**
 <ol>
 <li>Adding students/subjects</li>
-<li>Deleting students/subjects</li>
 <li>Editing students/subjects</li>
+<li>Deleting students/subjects</li>
 <li>Adding pictures to students</li>
 <li>Editing pictures for students</li>
 <li>Deleting pictures for students</li>
