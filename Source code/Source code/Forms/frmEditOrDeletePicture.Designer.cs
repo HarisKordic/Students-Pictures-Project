@@ -204,6 +204,7 @@
             this.ClientSize = new System.Drawing.Size(943, 454);
             this.Controls.Add(this.grpBoxStudents);
             this.IsMdiContainer = true;
+            this.MaximizeBox = false;
             this.Name = "frmEditOrDeletePicture";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit students pictures";

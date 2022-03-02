@@ -55,6 +55,9 @@
             // 
             // grpBoxAddNewPicture
             // 
+            this.grpBoxAddNewPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpBoxAddNewPicture.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.grpBoxAddNewPicture.Controls.Add(this.btnEdit);
             this.grpBoxAddNewPicture.Controls.Add(this.AddPicture);
@@ -147,6 +150,9 @@
             // 
             // grpBoxDisplayPics
             // 
+            this.grpBoxDisplayPics.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.grpBoxDisplayPics.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.grpBoxDisplayPics.Controls.Add(this.Description);
             this.grpBoxDisplayPics.Controls.Add(this.lblDescription);
@@ -166,6 +172,7 @@
             // 
             // Description
             // 
+            this.Description.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Description.Location = new System.Drawing.Point(6, 436);
             this.Description.Name = "Description";
             this.Description.Size = new System.Drawing.Size(93, 20);
@@ -174,6 +181,7 @@
             // 
             // lblDescription
             // 
+            this.lblDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDescription.Location = new System.Drawing.Point(6, 456);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(900, 176);
@@ -181,6 +189,7 @@
             // 
             // btnLeft
             // 
+            this.btnLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLeft.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnLeft.FlatAppearance.BorderSize = 100;
             this.btnLeft.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -196,6 +205,8 @@
             // 
             // DisplayPicture
             // 
+            this.DisplayPicture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DisplayPicture.Location = new System.Drawing.Point(288, 70);
             this.DisplayPicture.Name = "DisplayPicture";
             this.DisplayPicture.Size = new System.Drawing.Size(425, 326);
@@ -205,6 +216,8 @@
             // 
             // lblCurrentPicture
             // 
+            this.lblCurrentPicture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCurrentPicture.Location = new System.Drawing.Point(284, 22);
             this.lblCurrentPicture.Name = "lblCurrentPicture";
             this.lblCurrentPicture.Size = new System.Drawing.Size(429, 45);
@@ -213,6 +226,7 @@
             // 
             // btnRight
             // 
+            this.btnRight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRight.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnRight.FlatAppearance.BorderSize = 100;
             this.btnRight.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -228,6 +242,8 @@
             // 
             // lblDateOfPicture
             // 
+            this.lblDateOfPicture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDateOfPicture.AutoSize = true;
             this.lblDateOfPicture.Location = new System.Drawing.Point(430, 399);
             this.lblDateOfPicture.Name = "lblDateOfPicture";

@@ -38,6 +38,7 @@
             // llblMail
             // 
             this.llblMail.ActiveLinkColor = System.Drawing.SystemColors.ActiveCaption;
+            this.llblMail.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.llblMail.AutoSize = true;
             this.llblMail.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.llblMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -54,6 +55,7 @@
             // llblGithub
             // 
             this.llblGithub.ActiveLinkColor = System.Drawing.SystemColors.ActiveCaption;
+            this.llblGithub.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.llblGithub.AutoSize = true;
             this.llblGithub.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.llblGithub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -69,6 +71,7 @@
             // 
             // btnStartProgram
             // 
+            this.btnStartProgram.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnStartProgram.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnStartProgram.FlatAppearance.BorderSize = 100;
             this.btnStartProgram.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -84,6 +87,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.pictureBox1.Image = global::Source_code.Properties.Resources.sp_logo;
             this.pictureBox1.Location = new System.Drawing.Point(65, 12);
@@ -103,7 +107,6 @@
             this.Controls.Add(this.llblMail);
             this.Controls.Add(this.pictureBox1);
             this.IsMdiContainer = true;
-            this.MaximizeBox = false;
             this.Name = "Main_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome";

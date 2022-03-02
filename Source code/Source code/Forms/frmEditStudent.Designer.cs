@@ -223,6 +223,7 @@
             this.ClientSize = new System.Drawing.Size(404, 293);
             this.Controls.Add(this.grpBoxStudents);
             this.IsMdiContainer = true;
+            this.MaximizeBox = false;
             this.Name = "frmEditStudent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit student";
