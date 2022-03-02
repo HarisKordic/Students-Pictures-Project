@@ -38,8 +38,8 @@ _P.S. If you have any comments regarding the latest build,  please open a new is
 
 5.0 ~ Editing a student and/or a passed subject for a student:
       With a mouse click, directly on the wanted student (or on a passed subject of a student) a new dialog box will be opened where you can edit all of the relevant information for the student and/or for a passed subject.<br>
-      <img src=""> <br>
-      <img src="">
+      <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Project%20pictures/Edit_student"> <br> <br>
+      <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Project%20pictures/Edit_subject">
 
 6.0 ~ Deleting a student and/or a passed subject:
       With the corresponding click of the button "Delete" the user can delete the selected student or his subject.<br><br>
