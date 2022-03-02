@@ -14,7 +14,7 @@ This is a small Windows Form desktop application built with .NET 8.0 framework. 
 
 For communicating with the  database I used a NuGet package called SQL.ES6 and for the managment of the same, I used an app called "DB browser for SQLite".
 
-_P.S. If you have any comments regarding the latest build,  please open a new issue and let me know :D_
+_NOTE: If you have any comments regarding the latest build,  please open a new issue and let me know :D_
 
 <hr>
 
