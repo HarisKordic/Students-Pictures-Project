@@ -1,6 +1,6 @@
 # Student-Pictures-Project
 
-![](https://komarev.com/ghpvc/?username=Student-Pictures-Project&color=lightgrey)
+![](https://komarev.com/ghpvc/?username=Student-Pictures-Project&label=Project+views&color=lightgrey)
 
 <hr>
 
