@@ -25,3 +25,31 @@ C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Rele
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.csproj.CopyComplete
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.exe
 C:\Users\haris\Desktop\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.pdb
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\bin\Release\DatabBase.db
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\bin\Release\Source code.exe.config
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\bin\Release\Source code.exe
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\bin\Release\Source code.pdb
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\bin\Release\EntityFramework.dll
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\bin\Release\System.Data.SQLite.dll
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\bin\Release\System.Data.SQLite.EF6.dll
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\bin\Release\System.Data.SQLite.Linq.dll
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\bin\Release\EntityFramework.xml
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\bin\Release\System.Data.SQLite.xml
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.csproj.AssemblyReference.cache
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.csproj.SuggestedBindingRedirects.cache
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source_code.Forms.frmAddNewStudent.resources
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source_code.Forms.frmAddSubjectToStudent.resources
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source_code.Forms.frmEditOrDeletePicture.resources
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source_code.Forms.frmEditStudent.resources
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source_code.Forms.frmEditSubjectForStudent.resources
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source_code.Forms.frmMainView.resources
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source_code.Forms.frmStudentPicture.resources
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source_code.Main_form.resources
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source_code.Properties.Resources.resources
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.csproj.GenerateResource.cache
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.csproj.CoreCompileInputs.cache
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.csproj.CopyComplete
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.exe
+C:\Users\haris\Documents\GitHub\Student-Pictures-Project\Source code\Source code\obj\Release\Source code.pdb
