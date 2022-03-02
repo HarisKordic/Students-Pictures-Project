@@ -20,7 +20,7 @@ _P.S. If you have any comments regarding the latest build,  please open a new is
 
 1.0 ~ Intro screen:
       In this starting dialog you can find my contact information such as mail and a link to my github account. The dialog itself is very simple as it's main purpose is to start the program.<br>
-      <img src="">
+      <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Product%20pictures/Welcome_page.png">
 
 2.0 ~ Main view:
       This dialog shows two  data grid view controls showcasing the students recorded in the database, students and their passed subjects, as well as two search boxes where the user can search and filter students via the name and             surname, or search subjects via their name.<br>
