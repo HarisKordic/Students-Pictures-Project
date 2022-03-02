@@ -12,7 +12,7 @@ namespace Source_code.Forms
     public partial class frmMainView : Form
     {
         #region Form
-        private readonly ConnectionToDb _db = Db.DataBase;
+        private  ConnectionToDb _db = Db.DataBase;
         public frmMainView()
         {
             InitializeComponent();

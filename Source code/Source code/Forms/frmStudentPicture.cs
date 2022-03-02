@@ -13,8 +13,8 @@ namespace Source_code.Forms
     {
         #region Form
 
-        private readonly ConnectionToDb _db = Db.DataBase;
-        private readonly Student Student;
+        private  ConnectionToDb _db = Db.DataBase;
+        private  Student Student;
         private int Counter;//For enumerating through  multiple pictures;
         public frmStudentPicture(Student student)
         {

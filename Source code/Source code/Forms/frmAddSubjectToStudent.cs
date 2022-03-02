@@ -11,7 +11,7 @@ namespace Source_code.Forms
     {
         #region Form
 
-        private readonly ConnectionToDb _db = Db.DataBase;
+        private  ConnectionToDb _db = Db.DataBase;
         public frmAddSubjectToStudent()
         {
             InitializeComponent();
