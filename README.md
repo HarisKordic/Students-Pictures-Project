@@ -51,7 +51,7 @@ _NOTE: If you have any comments regarding the latest build,  please open a new i
       <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Project%20pictures/Students_pics.png"> <br><br>
       <img src="https://github.com/HarisKordic/Student-Pictures-Project/blob/main/Project%20pictures/Edit_pics.png">
 
-**_All of the functionallities such as_**
+**_All of the functionallities such as:_**
 <ol>
 <li>Adding students/subjects</li>
 <li>Deleting students/subjects</li>
@@ -61,5 +61,6 @@ _NOTE: If you have any comments regarding the latest build,  please open a new i
 <li>Deleting pictures for students</li>
 <li>Saving to a file</li>
 </ol>
+
 **_implement error signaling as well as user information and guidance._**
 <hr>
